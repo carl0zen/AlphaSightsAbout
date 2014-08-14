@@ -1,8 +1,59 @@
 {
-	"title": "Simple Blog",
-	"intro": "A simple example blog boilerplate using 'collections' in Mixture.",
-	"twitter": "teammixture",
+	"title": "We are the Software Development team",
+	"intro": "Building software that makes things happen at AlphaSights",
+	"twitter": "@AlphaSights",
 	"googleanalytics": "",
-	"domain": "http://link.com",
-	"email": "mail@yourmail.com"
+	"author": "@carlosepp",
+	"email": "carlosepp@gmail.com",
+	"sections":[
+		{
+			"title": "Our Values",
+			"values": [
+				{
+					"title": "Humble",
+					"description": "We value feedback on our work, whether it is positive or negative feedback",
+					"icon": "a"
+				},
+				{
+					"title": "Naturally interested in programming",
+					"description": "We would be programming for fun even if it wasn't our job",
+					"icon": "b"
+				},
+				{
+					"title": "Care about things",
+					"description": "We have original viewpoints and like to argue our case",
+					"icon": "c"
+				},
+				{
+					"title":"Teachers",
+					"description": "We enjoy the process of bringing others up to speed",
+					"icon": "d"
+				},
+				{
+					"title": "Community connected",
+					"description": "We know what is going on around us in the development community.",
+					"icon": "e"
+				}
+			]
+		},
+		{
+			"title": "Our Team",
+			"team":[
+				{
+					"name": "Tor Erik Linnerud",
+					"title": "Lead Developer",
+					"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
+					"profilePic": "",
+					"twitter": "",
+					"url": "http://sample.com"
+				},
+				{
+					"name":"Andrei Popa",
+					"title":"Lead Developer",
+					"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate tempora, totam ad officiis temporibus cum quaerat. Qui assumenda sunt praesentium repellat magni cumque, illum atque autem dicta sequi nulla deleniti."
+					
+				}
+			]
+		}
+	]
 }
