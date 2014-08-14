@@ -1,0 +1,39 @@
+
+
+<rss version="2.0">
+	<channel>
+		<generator>Mixture</generator>
+		<title>We are the Software Development team</title>
+		<link></link>
+		<description>Building software that makes things happen at AlphaSights</description>
+		<language>en</language>
+		<webMaster>carlosepp@gmail.com</webMaster>
+		<copyright>2014</copyright>
+		<pubDate>Thu, 06 Jun 2013 12:17:05 GMT</pubDate>
+		<lastBuildDate>Thu, 06 Jun 2013 12:17:05 GMT</lastBuildDate>
+		
+			<item>
+	<title>An example Liquid post</title>
+	<link>/article/liquid-example</link>
+	<guid>/article/liquid-example</guid>
+	
+	<pubDate>Thu, 13 Jun 2013 00:00:00 GMT</pubDate>
+	<description>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. &amp;#8220;Lorem ipsum dolor sit amet&amp;#8221; Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim...</description>
+</item><item>
+	<title>An example HAML post</title>
+	<link>/article/haml-example</link>
+	<guid>/article/haml-example</guid>
+	
+	<pubDate>Wed, 12 Jun 2013 00:00:00 GMT</pubDate>
+	<description>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. &amp;#8220;Lorem ipsum dolor sit amet&amp;#8221; Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim...</description>
+</item><item>
+	<title>An example Markdown post</title>
+	<link>/article/markdown-example</link>
+	<guid>/article/markdown-example</guid>
+	
+	<pubDate>Tue, 11 Jun 2013 00:00:00 GMT</pubDate>
+	<description>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. &amp;#8220;Lorem ipsum dolor sit amet&amp;#8221; Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim...</description>
+</item>
+		
+	</channel>
+</rss>

@@ -1,13 +1,13 @@
 {
   "convertHtml": {
-    "relativePaths": false
+    "relativePaths": true
   },
   "customRubyPath": null,
   "debug": false,
   "domain": null,
   "followLeader": true,
   "lintScripts": false,
-  "modelSource": null,
+  "modelSource": "https://crackling-heat-3418.firebaseio.com/",
   "optimiseImages": true,
   "preprocessorLocations": [
     "assets"
@@ -38,5 +38,5 @@
   "templateDefaultPage": "index",
   "templateDirectory": "templates",
   "type": "mixture",
-  "useCompass": false
+  "useCompass": true
 }

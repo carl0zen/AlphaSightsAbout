@@ -5,7 +5,7 @@
 	"googleanalytics": "",
 	"author": "@carlosepp",
 	"email": "carlosepp@gmail.com",
-	"index":[
+	"sections":[
 		{
 			"title": "Our Values",
 			"values": [
@@ -43,11 +43,15 @@
 					"name": "Tor Erik Linnerud",
 					"title": "Lead Developer",
 					"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
-					"profilePic": ""
+					"profilePic": "",
+					"twitter": "",
+					"url": "http://sample.com"
 				},
 				{
 					"name":"Andrei Popa",
-					"title":"Lead Developer"
+					"title":"Lead Developer",
+					"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate tempora, totam ad officiis temporibus cum quaerat. Qui assumenda sunt praesentium repellat magni cumque, illum atque autem dicta sequi nulla deleniti."
+					
 				}
 			]
 		}
