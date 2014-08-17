@@ -1,7 +1,13 @@
 {% layout "index" %}
 
 {% block content %} 
-	<h1>{{ model.title }}</h1>
+	
+	{% include "sections/main"  %}
+	{% include "sections/values"  %}
+	{% include "sections/team"  %}
+	{% include "sections/stack"  %}
+
+
 	<span class="subtitle">{{ model.intro }}</span>
 	{% collection "article" by 2 query 'tags={{ mixture.route.tag }}' order desc %}
 		{% if collection.current_page > collection.pages and collection.size > 0 %}

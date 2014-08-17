@@ -7,7 +7,7 @@
   "domain": null,
   "followLeader": true,
   "lintScripts": false,
-  "modelSource": "https://crackling-heat-3418.firebaseio.com/",
+  "modelSource": null, 
   "optimiseImages": true,
   "preprocessorLocations": [
     "assets"

@@ -1,12 +1,12 @@
 /*
  * Settings
  */
-@import url(//fonts.googleapis.com/css?family=Lato:400,700,400italic|Merriweather:400,700);
+
 
 $base-font-size:			15px!default;
 $base-line-height:		23px!default;
 
-$brand-face:					"Merriweather",sans-serif!default;
+$brand-face:					"Telegrafico",sans-serif!default;
 $default-face:				"Lato",sans-serif!default;
 
 $bgrnd-color:					#F9F9F9!default;
@@ -15,3 +15,167 @@ $default-font-color:	#333333!default;
 $base-spacing-unit:		$base-line-height!default;
 $half-spacing-unit:		$base-spacing-unit / 2!default;
 $line-height-ratio:		$base-line-height / $base-font-size;
+
+
+
+/*
+
+ ................
+  |   SETTINGS   |
+  ................
+
+  About this file:
+
+  In this file you will be able to modify the whole look and feel
+  of the whole project only by changing the values of the variables
+  defined below.
+*/
+/* ..-------------------------------------------------------...
+  |                         COLOR PALETTE                      |
+  |..--------------------------------------------------------..|*/
+
+  $color1: #002279;
+  $color2: #004434;
+  $color3: #770000;
+  $white: #fefefe;
+  $black: #333;
+  $orange:  #ffc22f;
+  $gray:  #999;
+  $defaultBg: $white;
+  $borderColor: lighten($gray, 20%);
+
+  $red: #773300;
+  $green: #2C944A;
+  $blue: #0662BD;
+  
+/* ..-------------------------------------------------------...
+  |                         HEADER                             |
+  |..--------------------------------------------------------..|*/
+  
+$headerBg: #333;
+$headerHeight:70px;
+$headerBgImage: none;
+$headerIsGradient: false;
+$headerBgBottom: transparent; //Bottom color for the header
+$headerGradientPosition: top;
+
+$logoSrc: '../img/logo.png';
+$logoWidth: 343px;
+$logoHeight: 107px;
+
+  /*...................Main Menu.....................*/
+  $menuBg: #fff;
+  $menuFont: sans-serif;
+  $menuFontSize: 1em;
+  $menuLetterSpacing: 1px;
+  $menuFontColor: black;
+
+
+
+/* ..-------------------------------------------------------...
+  |                         CONTENT                            |
+  |..--------------------------------------------------------..|*/
+
+$contentBg: $white;
+$defaultFont: sans-serif;
+
+// The default font-size is set to 100% of the browser style sheet (usually 16px)
+// for compatibility with browser-based text zoom or user-set defaults.
+
+$defaultFontSize: 100%;
+$em-base: 16 !default;
+
+$defaultFontColor: #444444;
+$defaultLetterSpacing: 0;
+
+$defaultBorderRadius: 7px;
+$defaultPadding: 1.3%;
+$defaultMargin: 10px;
+
+
+  /*...................Links.....................*/
+
+  $linkNormal: #255FA7;
+  $linkHover: lighten($linkNormal, 10%);
+  $linkActive: saturate($linkHover, 40%);
+  $linkVisited: saturate($linkNormal, 10%);
+  $linkFocus:lighten($linkHover, 10%);
+  
+  /*...................Sidebar.....................*/
+
+  $sidebarBgColor: #EEEEEE;
+
+  /*...................Headings.....................*/
+  $headingFont: sans-serif ;
+  $headingFontWeight: bold;
+  
+  $h1FontSize: 28px;
+
+  $h1Color: $black;
+  $h2Color: $h1Color;
+  $h3Color: $h1Color;
+  $h4Color: $h1Color;
+  $h5Color: $h1Color;
+  $h6Color: $h1Color;
+
+
+
+  /*...................Buttons.....................*/
+
+  $btnFont:bold 12px / 15px sans-serif;
+  $btnPadding: $defaultPadding;
+
+  $btnIsGradient: true;   // Do you want a gradient?
+  $btnGradientPosition: top;
+  $btnIsRounded: true; // Rounded Buttons?
+  $btnRoundness: $defaultBorderRadius;
+
+  /* Hover states */
+
+  $btnHoverLightness: 10%; //How lighter is the button color on hover
+
+  $btnDefaultBg: #3F83D6;
+  $btnDefaultColor: $white;
+  $btnSaveBg: green;
+  $btnSaveColor: $white;
+  $btnCancelBg: $gray;
+  $btnCancelColor: $black;
+
+  /*...................Forms.....................*/
+  
+  $inputBgColor: lighten($gray, 10%);
+  $inputFont: $defaultFont;
+  $inputFontSize: $defaultFontSize;
+  $inputBorderRadius: $defaultBorderRadius;
+  $inputBorder: none;
+  $inputBgHover: #eee;
+  $inputBgFocus: #eee;
+
+
+
+
+/* ..-------------------------------------------------------...
+  |                         FOOTER                             |
+  |..--------------------------------------------------------..|*/
+
+$footerBgColor: #eee;
+$logoFooterSrc: '../img/logo-footer.png';
+$logoFooterWidth: 173px;
+$logoFooterHeight: 28px;
+$footerFont: $defaultFont;
+$footerFontSize: $defaultFontSize;
+$footerMenuFont: $defaultFont;
+$footerMenuFontSize: $defaultFontSize;
+$footerMenuFontColor: $defaultFontColor;
+
+
+
+
+/* ..-------------------------------------------------------...
+  |                 ANIMATIONS & TRANSITIONS                   |
+  |..--------------------------------------------------------..|*/
+
+  $default-transition-property : all;
+  $default-transition-duration : 0.2s;
+  $default-transition-function : ease;    //[ ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(x1, y1, x2, y2)]
+  $default-transition-delay    : false;
