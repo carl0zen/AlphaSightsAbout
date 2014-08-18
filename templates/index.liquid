@@ -6,8 +6,12 @@
 	{% include "sections/values"  %}
 	{% include "sections/team"  %}
 	{% include "sections/stack"  %}
+	{% include "sections/fun"  %}
+	{% include "sections/benefits"  %}
+	{% include "sections/positions"  %}
 
 
+{% comment %}
 	<span class="subtitle">{{ model.intro }}</span>
 	{% collection "article" by 2 query 'tags={{ mixture.route.tag }}' order desc %}
 		{% if collection.current_page > collection.pages and collection.size > 0 %}
@@ -20,4 +24,5 @@
 			{% include "articles/paging" %}
 		{% endif %}
 	{% endcollection %}
+{% endcomment %}
 {% endblock %}

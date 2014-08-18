@@ -6,7 +6,7 @@
 $base-font-size:			15px!default;
 $base-line-height:		23px!default;
 
-$brand-face:					"Telegrafico",sans-serif!default;
+$brand-face:					"Open Sans",sans-serif!default;
 $default-face:				"Lato",sans-serif!default;
 
 $bgrnd-color:					#F9F9F9!default;
@@ -58,6 +58,8 @@ $headerBgImage: none;
 $headerIsGradient: false;
 $headerBgBottom: transparent; //Bottom color for the header
 $headerGradientPosition: top;
+$header__height: 4rem;
+
 
 $logoSrc: '../img/logo.png';
 $logoWidth: 343px;
@@ -75,7 +77,7 @@ $logoHeight: 107px;
 /* ..-------------------------------------------------------...
   |                         CONTENT                            |
   |..--------------------------------------------------------..|*/
-
+$content__max-width: 1280px;
 $contentBg: $white;
 $defaultFont: sans-serif;
 

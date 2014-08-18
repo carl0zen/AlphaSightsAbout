@@ -1,8 +1,5 @@
-<ul class="nav">
-{{global.title}}
+  <nav>
 	{% for item in global.menu %}
-	
-	<li><a href="{{item.link}}">{{item.name}}</a></li>
-
+	<a href="{{item.link}}">{{item.name}}</a>
 	{% endfor%}
-</ul>
+  </nav>

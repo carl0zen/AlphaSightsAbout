@@ -3,22 +3,19 @@
     <head>
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <link rel="alternate" type="application/rss+xml" href="/rss" title="RSS Feed">
-        <title>{% block title %}{{ model.title }}{% endblock %}</title>
+        <title>{% block title %}{{ global.title }}{% endblock %}</title>
         {{ "app.css" | asset_url | stylesheet_tag }}
         <link rel="stylesheet" href="{{ "layout.css" | asset_url }}" media="(min-width:1em)">
         {{ "modernizr.min.js" | asset_url | script_tag }}
     </head>
     <body>
-        <div class="wrapper">
-            {% include "header" %}
-            <div class="content">
-                
-                {% block content %}{% endblock %}
-            </div>
-            {% include "footer" %}
-        </div>
+        {% include "header" %}
+            {% block content %}{% endblock %}
+        {% include "footer" %}
         {% include "analytics" %}
+        {{ "app.min.js" | asset_url | script_tag }}
+
     </body>
 </html>

@@ -192,6 +192,27 @@
 				]
 			},
 			{
+				"title": "We have fun!",
+				"intro": "We like do things together outside of work (not just drinking)",
+				"gallery": [
+					{
+						"imageUrl": "#",
+						"url": "#",
+						"name": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam"
+					},
+					{
+						"imageUrl": "#",
+						"url": "#",
+						"name": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam"
+					},
+					{
+						"imageUrl": "#",
+						"url": "#",
+						"name": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam"
+					}
+				]
+			},
+			{
 				"title": "Our favorite benefits",
 				"benefits":[
 					{
@@ -236,6 +257,36 @@
 						"positions":[
 							{
 								"role": "Ruby on Rails Developer",
+								"url": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							},
+							{
+								"role": "Web designer",
+								"url": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							},
+							{
+								"role": "DevOps Engineer",
+								"url": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							},
+							{
+								"role": "Support Engineer",
+								"url": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							},
+							{
+								"role": "Front End Developer",
+								"url": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							}
+						]
+					},
+					{
+						"country": "New York",
+						"positions":[
+							{
+								"role": "Ruby on Rails Developer",
 								"link": "#",
 								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
 							},
@@ -262,7 +313,7 @@
 						]
 					},
 					{
-						"country": "New York",
+						"country": "Hong Kong",
 						"positions":[
 							{
 								"role": "Ruby on Rails Developer",

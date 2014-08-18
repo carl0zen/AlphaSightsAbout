@@ -1,0 +1,12 @@
+<div id="positions">
+	<h1>{{global.index.sections[5].title}}</h1>
+	<p>{{global.index.sections[5].subtitle}}</p>
+	{% for locations in global.index.sections[5].locations %}
+		<h3>{{locations.country}}</h3>
+		<ul class="positions">
+		{% for item in locations.positions %}
+			<li><a href="{{item.url}}">{{item.role}}</a></li>
+		{% endfor %}
+		</ul>
+	{% endfor %}
+</div>

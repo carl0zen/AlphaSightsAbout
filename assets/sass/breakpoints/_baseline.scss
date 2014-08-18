@@ -47,7 +47,6 @@ a{
  */
 .page-head{
 	position: relative;
-	max-width:650px;
 	margin: 0 auto;
 
 	p{
@@ -100,7 +99,7 @@ a{
  */
 .content{
 	padding:0;
-	max-width:650px;
+	max-width:$content__max-width;
 	margin:0 auto;
 
 	a{
