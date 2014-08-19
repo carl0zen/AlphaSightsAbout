@@ -58,10 +58,61 @@ header{
 }
 .content{
 	padding-top: $header__height;
+	
 }
-
+nav a {
+	text-transform: uppercase;
+	margin: 0 1em;
+	margin: 0 1rem;
+	text-decoration: none;
+	color: #9a9a9a;
+}
+h1{
+	text-align: center;
+	font-size: 4rem;
+	font-weight: 300;
+	color: #71777b;
+	&:before{
+		content:'';
+		width:100px;
+		height:1px;
+		background:black;
+		display:block
+	}
+}
 #main{
 	background: url(../img/stage__bg.jpg);
 	background-size: cover;
-	height:600px;
+	height:950px;
+	color:white;
+	.content{
+		text-align: center;
+		h1{
+			font-size: 4rem;
+			font-weight: 300;
+			line-height: 13rem;
+			color:white;
+			margin-top: 13rem;
+			&:before{
+				display:none
+			}
+			strong{
+				font-weight: 500;
+			}
+
+		}
+		.intro{
+			font-weight: 300;
+			font-size: 1.5rem;
+		}
+		.icon-arrowdown {
+			background: rgba(255,255,255,0.2);
+			border-radius: 50%;
+			font-size: 2rem;
+			padding: 30px;
+			display: block;
+			width: 90px;
+			margin: 15rem auto;
+		}
+	}
 }
