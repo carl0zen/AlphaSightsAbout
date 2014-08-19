@@ -66,57 +66,67 @@
 				"team":[
 					{
 						"name": "Tor Erik Linnerud",
-						"title": "Lead Developer",
+						"role": "Lead Developer",
 						"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
-						"profilePic": "#"
+						"imageUrl": "assets/img/team__1.png",
+						"url": "team/1"
+
 					},
 					{
 						"name":"Andrei Popa",
-						"title":"Lead Developer",
+						"role":"Lead Developer",
 						"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
-						"profilePic": ""
+						"imageUrl": "assets/img/team__2.png",
+						"url": "team/2"
 					},
 					{
 						"name": "David Griffiths",
-						"title": "Lead Developer",
+						"role": "Lead Developer",
 						"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
-						"profilePic": ""
+						"imageUrl": "assets/img/team__3.png",
+						"url": "team/3"
 					},
 					{
 						"name": "John Bohn",
-						"title": "Lead Developer",
+						"role": "Lead Developer",
 						"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
-						"profilePic": ""
+						"imageUrl": "assets/img/team__4.png",
+						"url": "team/4"
 					},
 					{
 						"name": "Zsombor Dee",
-						"title": "Lead Developer",
+						"role": "Lead Developer",
 						"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
-						"profilePic": ""
+						"imageUrl": "assets/img/team__5.png",
+						"url": "team/5"
 					},
 					{
 						"name": "Ju Liu",
-						"title": "Lead Developer",
+						"role": "Lead Developer",
 						"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
-						"profilePic": ""
+						"imageUrl": "assets/img/team__6.png",
+						"url": "team/6"
 					},
 					{
 						"name": "Damon Aw",
-						"title": "Lead Developer",
+						"role": "Lead Developer",
 						"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
-						"profilePic": ""
+						"imageUrl": "assets/img/team__7.png",
+						"url": "team/7"
 					},
 					{
 						"name": "Aluísio Azevedo",
-						"title": "Lead Developer",
+						"role": "Lead Developer",
 						"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
-						"profilePic": ""
+						"imageUrl": "assets/img/team__8.png",
+						"url": "team/8"
 					},
 					{
 						"name": "Tor Erik Linnerud",
-						"title": "Lead Developer",
+						"role": "Lead Developer",
 						"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
-						"profilePic": ""
+						"imageUrl": "assets/img/team__1.png",
+						"url": "team/9"
 					}
 				]
 			},
