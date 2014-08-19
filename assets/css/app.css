@@ -53,6 +53,7 @@
 @import "https://fontastic.s3.amazonaws.com/gtF9Dui8NZhuDeZqJgqiXG/icons.css";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,600,400);
 @import url(https://fontastic.s3.amazonaws.com/QD6XZevxhSidosxa6jfTdH/icons.css);
+@import "https://fontastic.s3.amazonaws.com/QD6XZevxhSidosxa6jfTdH/icons.css";
 article,
 aside,
 details,
@@ -3077,8 +3078,102 @@ header nav li {
   padding-top: 4rem;
 }
 
+nav a {
+  text-transform: uppercase;
+  margin: 0 1em;
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #9a9a9a;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 300;
+  color: black;
+}
+h1:before {
+  content: '';
+  width: 70px;
+  height: 1px;
+  background: #eee;
+  display: block;
+  bottom: 0;
+  margin: 0 auto;
+  top: 1.8em;
+  position: relative;
+}
+
 #main {
   background: url(../img/stage__bg.jpg);
   background-size: cover;
-  height: 600px;
+  height: 950px;
+  color: white;
+}
+#main .content {
+  text-align: center;
+}
+#main .content h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 13rem;
+  color: white;
+  margin-top: 13rem;
+}
+#main .content h1:before {
+  display: none;
+}
+#main .content h1 strong {
+  font-weight: 500;
+}
+#main .content .intro {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+#main .content .icon-arrowdown {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  font-size: 2rem;
+  padding: 30px;
+  display: block;
+  width: 90px;
+  margin: 15rem auto;
+}
+
+#values .values {
+  display: inline-block;
+  margin: 9rem 0;
+}
+#values .values ul {
+  margin-top: 3rem;
+  color: #9db1c0;
+}
+#values .values h3 {
+  color: #ff762a;
+  font-weight: 500;
+  line-height: 1.5;
+}
+#values .values p {
+  color: rgba(0, 0, 0, 0.26);
+  font-family: "Open Sans";
+  font-weight: 500;
+}
+#values .values li {
+  list-style-type: none;
+  width: 33%;
+  float: left;
+  text-align: center;
+  min-height: 23rem;
+  padding: 0 1rem;
+}
+#values .values .icon {
+  font-family: alphasights;
+  font-size: 3rem;
+  padding: 1.7rem;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(157, 177, 192, 0.26);
+  border-radius: 50%;
+  width: 8rem;
+  text-align: center;
+  color: #9db1c0;
 }
