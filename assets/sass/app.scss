@@ -27,62 +27,22 @@
 
 
 @import "helpers";
+@import "foundation/components/global";
+
 @import "foundation/components/grid";
 @import "foundation/components/top-bar";
 
 
-header{
-	&.top-bar{
-		background: white;
-		position: fixed;
-		width:100%;
-		height:4em;
-		height:$header__height;
-		line-height: 4em;
-		line-height: $header__height;
-	}
-	.row{
-		max-width:$content__max-width !important;
-		margin:0 auto;
-	}
-	.logo{
-		@extend .small-2 ,.columns;
-	}
-	nav{
-		text-align: right;
-		@extend .small-10 ,.columns;
-		li {
-			display: inline-block;
-		}
-	}
-}
+
 .content{
 	padding-top: $header__height;
 	
 }
-nav a {
-	text-transform: uppercase;
-	margin: 0 1em;
-	margin: 0 1rem;
-	text-decoration: none;
-	color: #9a9a9a;
+body,html{
+	height:100%;
 }
-h1{
-	text-align: center;
-	font-size: 5rem;
-	font-weight: 300;
-	color: darken($color1,90%);
-	&:before{
-		content: '';
-		width: 70px;
-		height: 1px;
-		background: #eee;
-		display: block;
-		bottom: 0;
-		margin: 0 auto;
-		top: 1.8em;
-		position: relative;
-	}
-}
+@import 'header';
+@import 'nav';
 @import 'sections/main';
 @import 'sections/values';
+@import 'sections/team';

@@ -1,2 +1,23 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,600,400);
 @import url(https://fontastic.s3.amazonaws.com/QD6XZevxhSidosxa6jfTdH/icons.css);
+
+h1,h2,h3,h4{
+	font-weight: 500;
+}
+h1{
+	text-align: center;
+	font-size: 5rem;
+	font-weight: 300;
+	color: darken($color1,90%);
+	&:before{
+		content: '';
+		width: 70px;
+		height: 1px;
+		background: #eee;
+		display: block;
+		bottom: 0;
+		margin: 0 auto;
+		top: 1.8em;
+		position: relative;
+	}
+}

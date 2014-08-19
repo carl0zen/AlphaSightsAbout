@@ -773,6 +773,28 @@ pre {
 /*
  * Typography
  */
+h1, h2, h3, h4 {
+  font-weight: 500;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 300;
+  color: black;
+}
+h1:before {
+  content: '';
+  width: 70px;
+  height: 1px;
+  background: #eee;
+  display: block;
+  bottom: 0;
+  margin: 0 auto;
+  top: 1.8em;
+  position: relative;
+}
+
 /* ..-------------------------------------------------------...
  |                         HELPER CLASSES                     |
  |..--------------------------------------------------------..|*/
@@ -3054,6 +3076,14 @@ meta.foundation-mq-topbar {
     position: absolute !important;
   }
 }
+.content {
+  padding-top: 4rem;
+}
+
+body, html {
+  height: 100%;
+}
+
 header.top-bar {
   background: white;
   position: fixed;
@@ -3074,34 +3104,12 @@ header nav li {
   display: inline-block;
 }
 
-.content {
-  padding-top: 4rem;
-}
-
 nav a {
   text-transform: uppercase;
   margin: 0 1em;
   margin: 0 1rem;
   text-decoration: none;
   color: #9a9a9a;
-}
-
-h1 {
-  text-align: center;
-  font-size: 5rem;
-  font-weight: 300;
-  color: black;
-}
-h1:before {
-  content: '';
-  width: 70px;
-  height: 1px;
-  background: #eee;
-  display: block;
-  bottom: 0;
-  margin: 0 auto;
-  top: 1.8em;
-  position: relative;
 }
 
 #main {
@@ -3116,9 +3124,9 @@ h1:before {
 #main .content h1 {
   font-size: 4rem;
   font-weight: 300;
-  line-height: 13rem;
-  color: white;
-  margin-top: 13rem;
+  line-height: 1.3;
+  color: #fff;
+  margin-top: 20rem;
 }
 #main .content h1:before {
   display: none;
@@ -3142,7 +3150,7 @@ h1:before {
 
 #values .values {
   display: inline-block;
-  margin: 9rem 0;
+  margin: 9rem 0 0rem 0;
 }
 #values .values ul {
   margin-top: 3rem;
@@ -3176,4 +3184,38 @@ h1:before {
   width: 8rem;
   text-align: center;
   color: #9db1c0;
+}
+
+#team {
+  padding: 6rem 0;
+  background: #2b2b2d;
+  color: #d7d7d7;
+}
+#team h1 {
+  color: #fff;
+}
+#team .team li {
+  display: inline-block;
+  width: 24.7%;
+  list-style-type: none;
+  text-align: center;
+  margin: 3rem 0;
+}
+#team .team li .avatar {
+  border-radius: 50%;
+  background: #000;
+  width: 15rem;
+  margin: 0 auto;
+  height: 15rem;
+  overflow: hidden;
+  display: table;
+}
+#team .team li h3 {
+  color: #e0e0e0;
+  font-weight: 500;
+}
+#team .team li p {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #7e7e7f;
 }

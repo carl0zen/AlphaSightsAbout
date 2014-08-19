@@ -1,0 +1,25 @@
+header{
+	&.top-bar{
+		background: white;
+		position: fixed;
+		width:100%;
+		height:4em;
+		height:$header__height;
+		line-height: 4em;
+		line-height: $header__height;
+	}
+	.row{
+		max-width:$content__max-width !important;
+		margin:0 auto;
+	}
+	.logo{
+		@extend .small-2 ,.columns;
+	}
+	nav{
+		text-align: right;
+		@extend .small-10 ,.columns;
+		li {
+			display: inline-block;
+		}
+	}
+}

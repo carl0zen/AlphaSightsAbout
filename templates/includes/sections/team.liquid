@@ -4,9 +4,9 @@
 		<ul class="team">
 		{% for item in global.index.sections[1].team %}
 			<li>
-				<div class="avatar "><img src="{{item.profilePic}}" alt="{{item.name}}"></div>
+				<span class="avatar "><img src="{{item.imageUrl}}" alt="{{item.name}}"></span>
 				<h3>{{item.name}}</h3>
-				<p>{{item.position}}</p>
+				<p>{{item.role}}</p>
 			</li>
 		{% endfor %}
 		</ul>
