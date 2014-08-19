@@ -34,13 +34,10 @@ $line-height-ratio:		$base-line-height / $base-font-size;
   |                         COLOR PALETTE                      |
   |..--------------------------------------------------------..|*/
 
-  $color1: #002279;
-  $color2: #004434;
-  $color3: #770000;
   $white: #fefefe;
   $black: #333;
-  $orange:  #ffc22f;
-  $gray:  #999;
+  $orange:  #ff762a;
+  $gray:  rgba(157, 177, 192, 0.26) !default;
   $defaultBg: $white;
   $borderColor: lighten($gray, 20%);
 
@@ -48,6 +45,9 @@ $line-height-ratio:		$base-line-height / $base-font-size;
   $green: #2C944A;
   $blue: #0662BD;
   
+  $color1: #9DB1C0;
+  $color2: $orange;
+  $color3: #770000;
 /* ..-------------------------------------------------------...
   |                         HEADER                             |
   |..--------------------------------------------------------..|*/
@@ -181,3 +181,6 @@ $footerMenuFontColor: $defaultFontColor;
   $default-transition-duration : 0.2s;
   $default-transition-function : ease;    //[ ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(x1, y1, x2, y2)]
   $default-transition-delay    : false;
+
+
+

@@ -1,0 +1,44 @@
+@import "https://fontastic.s3.amazonaws.com/QD6XZevxhSidosxa6jfTdH/icons.css";
+$values__border-color: rgba(157, 177, 192, 0.26) !default;
+$values__font-color: #9DB1C0 !default;
+
+#values{
+	.values{
+		display: inline-block;
+		margin: 9rem 0;
+		ul{
+			margin-top:3rem;
+			color: $values__font-color;
+		}
+		h3{
+			color: $orange;
+			font-weight: 500;
+			line-height: 1.5;
+			
+		}
+		p{
+			color: darken($gray,90%);
+			font-family: "Open Sans";
+			font-weight:500;
+		}
+		li{
+			list-style-type: none;
+			width:33%;
+			float:left;
+			text-align: center;
+			min-height: 23rem;
+			padding: 0 1rem;
+		}
+		.icon {
+			font-family: alphasights;
+			font-size: 3rem;
+			padding: 1.7rem;
+			background: rgba(255,255,255,.3);
+			border: 1px solid $values__border-color;
+			border-radius: 50%;
+			width: 8rem;
+			text-align: center;
+			color: $values__font-color;
+		}
+	}
+}
