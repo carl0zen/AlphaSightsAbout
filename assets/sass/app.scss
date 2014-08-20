@@ -4,7 +4,12 @@
 
 
 /*
- * Setup
+███████╗███████╗████████╗██╗   ██╗██████╗ 
+██╔════╝██╔════╝╚══██╔══╝██║   ██║██╔══██╗
+███████╗█████╗     ██║   ██║   ██║██████╔╝
+╚════██║██╔══╝     ██║   ██║   ██║██╔═══╝ 
+███████║███████╗   ██║   ╚██████╔╝██║     
+╚══════╝╚══════╝   ╚═╝    ╚═════╝ ╚═╝    
  */
 @import "settings";
 @import "generic/mixins";
@@ -18,11 +23,6 @@
  */
 @import "breakpoints/baseline";
 
-/*
- * Typography
- */
-@import "https://fontastic.s3.amazonaws.com/gtF9Dui8NZhuDeZqJgqiXG/icons.css";
-
 
 @import "includes/type";
 @import 'includes/header';
@@ -30,11 +30,35 @@
 @import "includes/helpers";
 
 
+
+/**
+███████╗ ██████╗ ██╗   ██╗███╗   ██╗██████╗  █████╗ ████████╗██╗ ██████╗ ███╗   ██╗
+██╔════╝██╔═══██╗██║   ██║████╗  ██║██╔══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║
+█████╗  ██║   ██║██║   ██║██╔██╗ ██║██║  ██║███████║   ██║   ██║██║   ██║██╔██╗ ██║
+██╔══╝  ██║   ██║██║   ██║██║╚██╗██║██║  ██║██╔══██║   ██║   ██║██║   ██║██║╚██╗██║
+██║     ╚██████╔╝╚██████╔╝██║ ╚████║██████╔╝██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
+╚═╝      ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══
+**/
+
+
 @import "foundation/components/global";
 @import "foundation/components/grid";
 @import "foundation/components/top-bar";
+@import "foundation/components/orbit";
 
-
+/**
+███████╗███████╗ ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗
+██╔════╝██╔════╝██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
+███████╗█████╗  ██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗
+╚════██║██╔══╝  ██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║
+███████║███████╗╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║
+╚══════╝╚══════╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+**/
+@import 'sections/main';
+@import 'sections/values';
+@import 'sections/team';
+@import 'sections/stack';
+@import 'sections/fun';
 
 
 .content{
@@ -44,8 +68,5 @@
 body,html{
 	height:100%;
 }
-@import 'sections/main';
-@import 'sections/values';
-@import 'sections/team';
-@import 'sections/stack';
+p{font-size:1em;}
 

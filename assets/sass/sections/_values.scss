@@ -5,7 +5,7 @@ $values__font-color: #9DB1C0 !default;
 #values{
 	.values{
 		display: inline-block;
-		margin: 9rem 0 0rem 0;
+		margin: 9rem 0 6rem;
 		ul{
 			margin-top:3rem;
 			color: $values__font-color;
@@ -26,7 +26,7 @@ $values__font-color: #9DB1C0 !default;
 			@extend .columns,.large-4;
 			float:left;
 			text-align: center;
-			min-height: 23rem;
+			min-height: 18rem;
 			padding: 0 1rem;
 		}
 		.icon {

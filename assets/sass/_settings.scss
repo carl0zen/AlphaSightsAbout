@@ -3,7 +3,7 @@
  */
 
 
-$base-font-size:			15px!default;
+$base-font-size:			16px!default;
 $base-line-height:		23px!default;
 
 $brand-face:					"Open Sans",sans-serif!default;
@@ -149,7 +149,7 @@ $defaultLetterSpacing: 0;
    .....................*/
    $headingFont: 'Open Sans' ;
    $headingFontWeight: bold;
-   
+   $headingFontColor: #71777b;
    $h1FontSize: 28px;
 
    $h1Color: $black;

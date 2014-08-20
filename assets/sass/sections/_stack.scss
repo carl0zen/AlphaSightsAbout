@@ -1,12 +1,12 @@
 #stack{
-	margin: 6rem 0 0rem 0;
+	margin: 6rem 0 9rem;
 	.stack{
 		display: inline-block;
 		width: 100%;
 		margin-top: 4rem;
 	}
 	.item{
-		@extend .columns, .small-2;
+		@extend .columns, .medium-2;
 		border-right:1px solid $gray;
 		border-bottom:1px solid $gray;
 		text-align:center;

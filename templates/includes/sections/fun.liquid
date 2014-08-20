@@ -3,7 +3,7 @@
 		<h1>{{global.index.sections[3].title}}</h1>
 		<p>{{global.index.sections[3].intro}}</p>
 	
-		<ul class="fun">
+		<ul class="fun" data-orbit>
 		{% for item in global.index.sections[3].gallery %}
 			<li>
 				<a href="{{item.url}}"><img src="{{item.imageUrl}}" alt="{{item.name}}"></a>

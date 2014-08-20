@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  * Setup
  */
@@ -7,7 +8,12 @@
 /*
 
  ................
-  |   SETTINGS   |
+        ███████╗███████╗████████╗████████╗██╗███╗   ██╗ ██████╗ ███████╗
+        ██╔════╝██╔════╝╚══██╔══╝╚══██╔══╝██║████╗  ██║██╔════╝ ██╔════╝
+        ███████╗█████╗     ██║      ██║   ██║██╔██╗ ██║██║  ███╗███████╗
+        ╚════██║██╔══╝     ██║      ██║   ██║██║╚██╗██║██║   ██║╚════██║
+███████╗███████║███████╗   ██║      ██║   ██║██║ ╚████║╚██████╔╝███████║
+╚══════╝╚══════╝╚══════╝   ╚═╝      ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝
   ................
 
   About this file:
@@ -17,26 +23,120 @@
   defined below.
 */
 /* ..-------------------------------------------------------...
-  |                         COLOR PALETTE                      |
+        ██████╗ ██████╗ ██╗      ██████╗ ██████╗ 
+       ██╔════╝██╔═══██╗██║     ██╔═══██╗██╔══██╗
+   1   ██║     ██║   ██║██║     ██║   ██║██████╔╝
+       ██║     ██║   ██║██║     ██║   ██║██╔══██╗
+       ╚██████╗╚██████╔╝███████╗╚██████╔╝██║  ██║
+        ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝                     |
   |..--------------------------------------------------------..|*/
 /* ..-------------------------------------------------------...
-  |                         HEADER                             |
+     ██╗  ██╗███████╗ █████╗ ██████╗ ███████╗██████╗ 
+     ██║  ██║██╔════╝██╔══██╗██╔══██╗██╔════╝██╔══██╗
+ 2   ███████║█████╗  ███████║██║  ██║█████╗  ██████╔╝
+     ██╔══██║██╔══╝  ██╔══██║██║  ██║██╔══╝  ██╔══██╗
+     ██║  ██║███████╗██║  ██║██████╔╝███████╗██║  ██║
+     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝                         |
   |..--------------------------------------------------------..|*/
-/*...................Main Menu.....................*/
+  /*...................
+
+  ███╗   ███╗███████╗███╗   ██╗██╗   ██╗
+  ████╗ ████║██╔════╝████╗  ██║██║   ██║
+3 ██╔████╔██║█████╗  ██╔██╗ ██║██║   ██║
+  ██║╚██╔╝██║██╔══╝  ██║╚██╗██║██║   ██║
+  ██║ ╚═╝ ██║███████╗██║ ╚████║╚██████╔╝
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝ ╚═════╝
+  
+  .....................*/
 /* ..-------------------------------------------------------...
-  |                         CONTENT                            |
+
+████████╗██╗   ██╗██████╗ ███████╗
+╚══██╔══╝╚██╗ ██╔╝██╔══██╗██╔════╝
+   ██║    ╚████╔╝ ██████╔╝█████╗  
+   ██║     ╚██╔╝  ██╔═══╝ ██╔══╝  
+   ██║      ██║   ██║     ███████╗
+   ╚═╝      ╚═╝   ╚═╝     ╚══════╝
+                                  |
   |..--------------------------------------------------------..|*/
-/*...................Links.....................*/
-/*...................Sidebar.....................*/
-/*...................Headings.....................*/
-/*...................Buttons.....................*/
+/**
+$header-font-family:  
+$header-font-weight:  
+$header-font-style:   
+$header-font-color:   
+$header-line-height:  
+$header-top-margin:   
+$header-bottom-margin:**/
+        /*...................
+
+   ██╗  ██╗███████╗ █████╗ ██████╗ ██╗███╗   ██╗ ██████╗ ███████╗
+   ██║  ██║██╔════╝██╔══██╗██╔══██╗██║████╗  ██║██╔════╝ ██╔════╝
+   ███████║█████╗  ███████║██║  ██║██║██╔██╗ ██║██║  ███╗███████╗
+   ██╔══██║██╔══╝  ██╔══██║██║  ██║██║██║╚██╗██║██║   ██║╚════██║
+   ██║  ██║███████╗██║  ██║██████╔╝██║██║ ╚████║╚██████╔╝███████║
+   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝
+
+   .....................*/
+/**
+ ██████╗ ███████╗███╗   ██╗███████╗██████╗  █████╗ ██╗     
+██╔════╝ ██╔════╝████╗  ██║██╔════╝██╔══██╗██╔══██╗██║     
+██║  ███╗█████╗  ██╔██╗ ██║█████╗  ██████╔╝███████║██║     
+██║   ██║██╔══╝  ██║╚██╗██║██╔══╝  ██╔══██╗██╔══██║██║     
+╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║██║  ██║███████╗
+ ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝
+**/
+  /*...................
+  
+██╗     ██╗███╗   ██╗██╗  ██╗███████╗
+██║     ██║████╗  ██║██║ ██╔╝██╔════╝
+██║     ██║██╔██╗ ██║█████╔╝ ███████╗
+██║     ██║██║╚██╗██║██╔═██╗ ╚════██║
+███████╗██║██║ ╚████║██║  ██╗███████║
+╚══════╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝
+                                   
+  
+  ....................*/
+  /*..................
+███████╗██╗██████╗ ███████╗██████╗  █████╗ ██████╗ 
+██╔════╝██║██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔══██╗
+███████╗██║██║  ██║█████╗  ██████╔╝███████║██████╔╝
+╚════██║██║██║  ██║██╔══╝  ██╔══██╗██╔══██║██╔══██╗
+███████║██║██████╔╝███████╗██████╔╝██║  ██║██║  ██║
+╚══════╝╚═╝╚═════╝ ╚══════╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+                                         
+  .....................*/
+  /*...................
+
+██████╗ ██╗   ██╗████████╗████████╗ ██████╗ ███╗   ██╗███████╗
+██╔══██╗██║   ██║╚══██╔══╝╚══██╔══╝██╔═══██╗████╗  ██║██╔════╝
+██████╔╝██║   ██║   ██║      ██║   ██║   ██║██╔██╗ ██║███████╗
+██╔══██╗██║   ██║   ██║      ██║   ██║   ██║██║╚██╗██║╚════██║
+██████╔╝╚██████╔╝   ██║      ██║   ╚██████╔╝██║ ╚████║███████║
+╚═════╝  ╚═════╝    ╚═╝      ╚═╝    ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+  .....................*/
 /* Hover states */
-/*...................Forms.....................*/
+/*.................   * * *
+███████╗ ██████╗ ██████╗ ███╗   ███╗███████╗
+██╔════╝██╔═══██╗██╔══██╗████╗ ████║██╔════╝
+█████╗  ██║   ██║██████╔╝██╔████╔██║███████╗
+██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║╚════██║
+██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║███████║
+╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝
+.....................--*/
 /* ..-------------------------------------------------------...
-  |                         FOOTER                             |
+███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
+██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗
+█████╗  ██║   ██║██║   ██║   ██║   █████╗  ██████╔╝
+██╔══╝  ██║   ██║██║   ██║   ██║   ██╔══╝  ██╔══██╗
+██║     ╚██████╔╝╚██████╔╝   ██║   ███████╗██║  ██║
+╚═╝      ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝                           |
   |..--------------------------------------------------------..|*/
 /* ..-------------------------------------------------------...
-  |                 ANIMATIONS & TRANSITIONS                   |
+ █████╗ ███╗   ██╗██╗███╗   ███╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗███████╗
+██╔══██╗████╗  ██║██║████╗ ████║██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
+███████║██╔██╗ ██║██║██╔████╔██║███████║   ██║   ██║██║   ██║██╔██╗ ██║███████╗
+██╔══██║██║╚██╗██║██║██║╚██╔╝██║██╔══██║   ██║   ██║██║   ██║██║╚██╗██║╚════██║
+██║  ██║██║ ╚████║██║██║ ╚═╝ ██║██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║███████║
+╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝                  |
   |..--------------------------------------------------------..|*/
 /* 
  * Mixins // Credit to Harry Roberts & inuit.css for these simple Mixins
@@ -429,6 +529,10 @@ textarea:focus {
   outline: none;
 }
 
+h1 {
+  font-size: 1rem;
+}
+
 /*
  * Micro clearfix, as per: nicolasgallagher.com/micro-clearfix-hack
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
@@ -797,6 +901,35 @@ h1:before {
   position: relative;
 }
 
+header.top-bar {
+  background: white;
+  position: fixed;
+  width: 100%;
+  height: 4em;
+  height: 4rem;
+  line-height: 4em;
+  line-height: 4rem;
+  z-index: 99;
+}
+header .row {
+  max-width: 1280px !important;
+  margin: 0 auto;
+}
+header nav {
+  text-align: right;
+}
+header nav li {
+  display: inline-block;
+}
+
+nav a {
+  text-transform: uppercase;
+  margin: 0 1em;
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #9a9a9a;
+}
+
 /* ..-------------------------------------------------------...
  |                         HELPER CLASSES                     |
  |..--------------------------------------------------------..|*/
@@ -1000,7 +1133,7 @@ body {
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans";
   font-weight: normal;
   font-style: normal;
   line-height: 23px;
@@ -1088,7 +1221,9 @@ select {
 .row.collapse > .columns,
 header .row.collapse > .logo,
 header .row.collapse > nav,
-#team .team .row.collapse > li {
+#values .values .row.collapse > .item,
+#team .team .row.collapse > li,
+#stack .row.collapse > .item {
   padding-left: 0;
   padding-right: 0;
 }
@@ -1128,7 +1263,9 @@ header .row.collapse > nav,
 .columns,
 header .logo,
 header nav,
-#team .team li {
+#values .values .item,
+#team .team li,
+#stack .item {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   width: 100%;
@@ -1292,7 +1429,9 @@ header nav,
   .columns,
   header .logo,
   header nav,
-  #team .team li {
+  #values .values .item,
+  #team .team li,
+  #stack .item {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1303,7 +1442,7 @@ header nav,
     width: 8.33333%;
   }
 
-  .small-2, header .logo {
+  .small-2, header .logo, #stack .item {
     width: 16.66667%;
   }
 
@@ -1407,7 +1546,9 @@ header nav,
   .columns.small-centered,
   header .small-centered.logo,
   header nav.small-centered,
-  #team .team li.small-centered {
+  #values .values .small-centered.item,
+  #team .team li.small-centered,
+  #stack .small-centered.item {
     margin-left: auto;
     margin-right: auto;
     float: none;
@@ -1417,7 +1558,9 @@ header nav,
   .columns.small-uncentered,
   header .small-uncentered.logo,
   header nav.small-uncentered,
-  #team .team li.small-uncentered {
+  #values .values .small-uncentered.item,
+  #team .team li.small-uncentered,
+  #stack .small-uncentered.item {
     margin-left: 0;
     margin-right: 0;
     float: left;
@@ -1427,7 +1570,9 @@ header nav,
   .columns.small-centered:last-child,
   header .small-centered.logo:last-child,
   header nav.small-centered:last-child,
-  #team .team li.small-centered:last-child {
+  #values .values .small-centered.item:last-child,
+  #team .team li.small-centered:last-child,
+  #stack .small-centered.item:last-child {
     float: none;
   }
 
@@ -1435,7 +1580,9 @@ header nav,
   .columns.small-uncentered:last-child,
   header .small-uncentered.logo:last-child,
   header nav.small-uncentered:last-child,
-  #team .team li.small-uncentered:last-child {
+  #values .values .small-uncentered.item:last-child,
+  #team .team li.small-uncentered:last-child,
+  #stack .small-uncentered.item:last-child {
     float: left;
   }
 
@@ -1443,7 +1590,9 @@ header nav,
   .columns.small-uncentered.opposite,
   header .small-uncentered.opposite.logo,
   header nav.small-uncentered.opposite,
-  #team .team li.small-uncentered.opposite {
+  #values .values .small-uncentered.opposite.item,
+  #team .team li.small-uncentered.opposite,
+  #stack .small-uncentered.opposite.item {
     float: right;
   }
 }
@@ -1596,7 +1745,9 @@ header nav,
   .columns,
   header .logo,
   header nav,
-  #team .team li {
+  #values .values .item,
+  #team .team li,
+  #stack .item {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1711,7 +1862,9 @@ header nav,
   .columns.medium-centered,
   header .medium-centered.logo,
   header nav.medium-centered,
-  #team .team li.medium-centered {
+  #values .values .medium-centered.item,
+  #team .team li.medium-centered,
+  #stack .medium-centered.item {
     margin-left: auto;
     margin-right: auto;
     float: none;
@@ -1721,7 +1874,9 @@ header nav,
   .columns.medium-uncentered,
   header .medium-uncentered.logo,
   header nav.medium-uncentered,
-  #team .team li.medium-uncentered {
+  #values .values .medium-uncentered.item,
+  #team .team li.medium-uncentered,
+  #stack .medium-uncentered.item {
     margin-left: 0;
     margin-right: 0;
     float: left;
@@ -1731,7 +1886,9 @@ header nav,
   .columns.medium-centered:last-child,
   header .medium-centered.logo:last-child,
   header nav.medium-centered:last-child,
-  #team .team li.medium-centered:last-child {
+  #values .values .medium-centered.item:last-child,
+  #team .team li.medium-centered:last-child,
+  #stack .medium-centered.item:last-child {
     float: none;
   }
 
@@ -1739,7 +1896,9 @@ header nav,
   .columns.medium-uncentered:last-child,
   header .medium-uncentered.logo:last-child,
   header nav.medium-uncentered:last-child,
-  #team .team li.medium-uncentered:last-child {
+  #values .values .medium-uncentered.item:last-child,
+  #team .team li.medium-uncentered:last-child,
+  #stack .medium-uncentered.item:last-child {
     float: left;
   }
 
@@ -1747,7 +1906,9 @@ header nav,
   .columns.medium-uncentered.opposite,
   header .medium-uncentered.opposite.logo,
   header nav.medium-uncentered.opposite,
-  #team .team li.medium-uncentered.opposite {
+  #values .values .medium-uncentered.opposite.item,
+  #team .team li.medium-uncentered.opposite,
+  #stack .medium-uncentered.opposite.item {
     float: right;
   }
 
@@ -2044,7 +2205,9 @@ header nav,
   .columns,
   header .logo,
   header nav,
-  #team .team li {
+  #values .values .item,
+  #team .team li,
+  #stack .item {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -2063,7 +2226,7 @@ header nav,
     width: 25%;
   }
 
-  .large-4 {
+  .large-4, #values .values .item {
     width: 33.33333%;
   }
 
@@ -2159,7 +2322,9 @@ header nav,
   .columns.large-centered,
   header .large-centered.logo,
   header nav.large-centered,
-  #team .team li.large-centered {
+  #values .values .large-centered.item,
+  #team .team li.large-centered,
+  #stack .large-centered.item {
     margin-left: auto;
     margin-right: auto;
     float: none;
@@ -2169,7 +2334,9 @@ header nav,
   .columns.large-uncentered,
   header .large-uncentered.logo,
   header nav.large-uncentered,
-  #team .team li.large-uncentered {
+  #values .values .large-uncentered.item,
+  #team .team li.large-uncentered,
+  #stack .large-uncentered.item {
     margin-left: 0;
     margin-right: 0;
     float: left;
@@ -2179,7 +2346,9 @@ header nav,
   .columns.large-centered:last-child,
   header .large-centered.logo:last-child,
   header nav.large-centered:last-child,
-  #team .team li.large-centered:last-child {
+  #values .values .large-centered.item:last-child,
+  #team .team li.large-centered:last-child,
+  #stack .large-centered.item:last-child {
     float: none;
   }
 
@@ -2187,7 +2356,9 @@ header nav,
   .columns.large-uncentered:last-child,
   header .large-uncentered.logo:last-child,
   header nav.large-uncentered:last-child,
-  #team .team li.large-uncentered:last-child {
+  #values .values .large-uncentered.item:last-child,
+  #team .team li.large-uncentered:last-child,
+  #stack .large-uncentered.item:last-child {
     float: left;
   }
 
@@ -2195,7 +2366,9 @@ header nav,
   .columns.large-uncentered.opposite,
   header .large-uncentered.opposite.logo,
   header nav.large-uncentered.opposite,
-  #team .team li.large-uncentered.opposite {
+  #values .values .large-uncentered.opposite.item,
+  #team .team li.large-uncentered.opposite,
+  #stack .large-uncentered.opposite.item {
     float: right;
   }
 
@@ -2347,7 +2520,7 @@ button, .button {
   border-style: solid;
   border-width: 0px;
   cursor: pointer;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans";
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -2699,7 +2872,7 @@ meta.foundation-mq-topbar {
   color: white;
   padding: 12px 0 12px 0;
   padding-left: 15px;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans";
   font-size: 0.8125rem;
   font-weight: normal;
   text-transform: none;
@@ -3106,35 +3279,6 @@ body, html {
   height: 100%;
 }
 
-header.top-bar {
-  background: white;
-  position: fixed;
-  width: 100%;
-  height: 4em;
-  height: 4rem;
-  line-height: 4em;
-  line-height: 4rem;
-  z-index: 99;
-}
-header .row {
-  max-width: 1280px !important;
-  margin: 0 auto;
-}
-header nav {
-  text-align: right;
-}
-header nav li {
-  display: inline-block;
-}
-
-nav a {
-  text-transform: uppercase;
-  margin: 0 1em;
-  margin: 0 1rem;
-  text-decoration: none;
-  color: #9a9a9a;
-}
-
 #main {
   background: url(../img/stage__bg.jpg);
   background-size: cover;
@@ -3189,9 +3333,8 @@ nav a {
   font-family: "Open Sans";
   font-weight: 500;
 }
-#values .values li {
+#values .values .item {
   list-style-type: none;
-  width: 33%;
   float: left;
   text-align: center;
   min-height: 23rem;
@@ -3242,4 +3385,24 @@ nav a {
   text-transform: uppercase;
   font-size: 0.8rem;
   color: #7e7e7f;
+}
+
+#stack {
+  margin: 6rem 0 0rem 0;
+}
+#stack .stack {
+  display: inline-block;
+  width: 100%;
+  margin-top: 4rem;
+}
+#stack .item {
+  border-right: 1px solid rgba(157, 177, 192, 0.26);
+  border-bottom: 1px solid rgba(157, 177, 192, 0.26);
+  text-align: center;
+  min-height: 5em;
+  display: table;
+  line-height: 8rem;
+}
+#stack .item a {
+  display: table-cell;
 }

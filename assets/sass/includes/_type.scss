@@ -1,13 +1,14 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,600,400);
 
-//AlphaSights Vector Font Icons
+//font-family: 'alphasights' Vector Font Icons
 @import url(https://fontastic.s3.amazonaws.com/QD6XZevxhSidosxa6jfTdH/icons.css);
 
 
 
 h1,h2,h3,h4{
 	font-weight: 500 ;
+	color: $headingFontColor;
 }
 h1{
 	text-align: center;
@@ -15,7 +16,7 @@ h1{
 	font-size: 2.4rem;
 	line-height: 1.23;
 	font-weight: 300;
-	color: darken($color1,70%);
+	color: $headingFontColor;
 	&:before{
 		content: '';
 		width: 70px;

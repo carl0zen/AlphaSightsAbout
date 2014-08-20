@@ -206,17 +206,17 @@
 				"intro": "We like do things together outside of work (not just drinking)",
 				"gallery": [
 					{
-						"imageUrl": "#",
+						"imageUrl": "assets/img/fun__1.jpg",
 						"url": "#",
 						"name": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam"
 					},
 					{
-						"imageUrl": "#",
+						"imageUrl": "assets/img/fun__1.jpg",
 						"url": "#",
 						"name": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam"
 					},
 					{
-						"imageUrl": "#",
+						"imageUrl": "assets/img/fun__1.jpg",
 						"url": "#",
 						"name": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam"
 					}
