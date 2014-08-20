@@ -22,15 +22,18 @@
  * Typography
  */
 @import "https://fontastic.s3.amazonaws.com/gtF9Dui8NZhuDeZqJgqiXG/icons.css";
-@import "type";
 
 
+@import "includes/type";
+@import 'includes/header';
+@import 'includes/nav';
+@import "includes/helpers";
 
-@import "helpers";
+
 @import "foundation/components/global";
-
 @import "foundation/components/grid";
 @import "foundation/components/top-bar";
+
 
 
 
@@ -41,8 +44,8 @@
 body,html{
 	height:100%;
 }
-@import 'header';
-@import 'nav';
 @import 'sections/main';
 @import 'sections/values';
 @import 'sections/team';
+@import 'sections/stack';
+

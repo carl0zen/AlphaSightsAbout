@@ -7,6 +7,7 @@ header{
 		height:$header__height;
 		line-height: 4em;
 		line-height: $header__height;
+		z-index: 99;
 	}
 	.row{
 		max-width:$content__max-width !important;

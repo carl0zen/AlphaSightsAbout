@@ -773,6 +773,30 @@ pre {
 /*
  * Typography
  */
+h1, h2, h3, h4 {
+  font-weight: 500;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  font-size: 2.4rem;
+  line-height: 1.23;
+  font-weight: 300;
+  color: black;
+}
+h1:before {
+  content: '';
+  width: 70px;
+  height: 1px;
+  background: #eee;
+  display: block;
+  bottom: 0;
+  margin: 0 auto;
+  top: 1.8em;
+  position: relative;
+}
+
 /* ..-------------------------------------------------------...
  |                         HELPER CLASSES                     |
  |..--------------------------------------------------------..|*/
@@ -1063,7 +1087,8 @@ select {
 .row.collapse > .column,
 .row.collapse > .columns,
 header .row.collapse > .logo,
-header .row.collapse > nav {
+header .row.collapse > nav,
+#team .team .row.collapse > li {
   padding-left: 0;
   padding-right: 0;
 }
@@ -1102,7 +1127,8 @@ header .row.collapse > nav {
 .column,
 .columns,
 header .logo,
-header nav {
+header nav,
+#team .team li {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   width: 100%;
@@ -1265,7 +1291,8 @@ header nav {
   .column,
   .columns,
   header .logo,
-  header nav {
+  header nav,
+  #team .team li {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1379,7 +1406,8 @@ header nav {
   .column.small-centered,
   .columns.small-centered,
   header .small-centered.logo,
-  header nav.small-centered {
+  header nav.small-centered,
+  #team .team li.small-centered {
     margin-left: auto;
     margin-right: auto;
     float: none;
@@ -1388,7 +1416,8 @@ header nav {
   .column.small-uncentered,
   .columns.small-uncentered,
   header .small-uncentered.logo,
-  header nav.small-uncentered {
+  header nav.small-uncentered,
+  #team .team li.small-uncentered {
     margin-left: 0;
     margin-right: 0;
     float: left;
@@ -1397,21 +1426,24 @@ header nav {
   .column.small-centered:last-child,
   .columns.small-centered:last-child,
   header .small-centered.logo:last-child,
-  header nav.small-centered:last-child {
+  header nav.small-centered:last-child,
+  #team .team li.small-centered:last-child {
     float: none;
   }
 
   .column.small-uncentered:last-child,
   .columns.small-uncentered:last-child,
   header .small-uncentered.logo:last-child,
-  header nav.small-uncentered:last-child {
+  header nav.small-uncentered:last-child,
+  #team .team li.small-uncentered:last-child {
     float: left;
   }
 
   .column.small-uncentered.opposite,
   .columns.small-uncentered.opposite,
   header .small-uncentered.opposite.logo,
-  header nav.small-uncentered.opposite {
+  header nav.small-uncentered.opposite,
+  #team .team li.small-uncentered.opposite {
     float: right;
   }
 }
@@ -1563,7 +1595,8 @@ header nav {
   .column,
   .columns,
   header .logo,
-  header nav {
+  header nav,
+  #team .team li {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1677,7 +1710,8 @@ header nav {
   .column.medium-centered,
   .columns.medium-centered,
   header .medium-centered.logo,
-  header nav.medium-centered {
+  header nav.medium-centered,
+  #team .team li.medium-centered {
     margin-left: auto;
     margin-right: auto;
     float: none;
@@ -1686,7 +1720,8 @@ header nav {
   .column.medium-uncentered,
   .columns.medium-uncentered,
   header .medium-uncentered.logo,
-  header nav.medium-uncentered {
+  header nav.medium-uncentered,
+  #team .team li.medium-uncentered {
     margin-left: 0;
     margin-right: 0;
     float: left;
@@ -1695,21 +1730,24 @@ header nav {
   .column.medium-centered:last-child,
   .columns.medium-centered:last-child,
   header .medium-centered.logo:last-child,
-  header nav.medium-centered:last-child {
+  header nav.medium-centered:last-child,
+  #team .team li.medium-centered:last-child {
     float: none;
   }
 
   .column.medium-uncentered:last-child,
   .columns.medium-uncentered:last-child,
   header .medium-uncentered.logo:last-child,
-  header nav.medium-uncentered:last-child {
+  header nav.medium-uncentered:last-child,
+  #team .team li.medium-uncentered:last-child {
     float: left;
   }
 
   .column.medium-uncentered.opposite,
   .columns.medium-uncentered.opposite,
   header .medium-uncentered.opposite.logo,
-  header nav.medium-uncentered.opposite {
+  header nav.medium-uncentered.opposite,
+  #team .team li.medium-uncentered.opposite {
     float: right;
   }
 
@@ -2005,7 +2043,8 @@ header nav {
   .column,
   .columns,
   header .logo,
-  header nav {
+  header nav,
+  #team .team li {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -2020,7 +2059,7 @@ header nav {
     width: 16.66667%;
   }
 
-  .large-3 {
+  .large-3, #team .team li {
     width: 25%;
   }
 
@@ -2119,7 +2158,8 @@ header nav {
   .column.large-centered,
   .columns.large-centered,
   header .large-centered.logo,
-  header nav.large-centered {
+  header nav.large-centered,
+  #team .team li.large-centered {
     margin-left: auto;
     margin-right: auto;
     float: none;
@@ -2128,7 +2168,8 @@ header nav {
   .column.large-uncentered,
   .columns.large-uncentered,
   header .large-uncentered.logo,
-  header nav.large-uncentered {
+  header nav.large-uncentered,
+  #team .team li.large-uncentered {
     margin-left: 0;
     margin-right: 0;
     float: left;
@@ -2137,21 +2178,24 @@ header nav {
   .column.large-centered:last-child,
   .columns.large-centered:last-child,
   header .large-centered.logo:last-child,
-  header nav.large-centered:last-child {
+  header nav.large-centered:last-child,
+  #team .team li.large-centered:last-child {
     float: none;
   }
 
   .column.large-uncentered:last-child,
   .columns.large-uncentered:last-child,
   header .large-uncentered.logo:last-child,
-  header nav.large-uncentered:last-child {
+  header nav.large-uncentered:last-child,
+  #team .team li.large-uncentered:last-child {
     float: left;
   }
 
   .column.large-uncentered.opposite,
   .columns.large-uncentered.opposite,
   header .large-uncentered.opposite.logo,
-  header nav.large-uncentered.opposite {
+  header nav.large-uncentered.opposite,
+  #team .team li.large-uncentered.opposite {
     float: right;
   }
 
@@ -3054,6 +3098,14 @@ meta.foundation-mq-topbar {
     position: absolute !important;
   }
 }
+.content {
+  padding-top: 4rem;
+}
+
+body, html {
+  height: 100%;
+}
+
 header.top-bar {
   background: white;
   position: fixed;
@@ -3062,6 +3114,7 @@ header.top-bar {
   height: 4rem;
   line-height: 4em;
   line-height: 4rem;
+  z-index: 99;
 }
 header .row {
   max-width: 1280px !important;
@@ -3074,34 +3127,12 @@ header nav li {
   display: inline-block;
 }
 
-.content {
-  padding-top: 4rem;
-}
-
 nav a {
   text-transform: uppercase;
   margin: 0 1em;
   margin: 0 1rem;
   text-decoration: none;
   color: #9a9a9a;
-}
-
-h1 {
-  text-align: center;
-  font-size: 5rem;
-  font-weight: 300;
-  color: black;
-}
-h1:before {
-  content: '';
-  width: 70px;
-  height: 1px;
-  background: #eee;
-  display: block;
-  bottom: 0;
-  margin: 0 auto;
-  top: 1.8em;
-  position: relative;
 }
 
 #main {
@@ -3116,9 +3147,9 @@ h1:before {
 #main .content h1 {
   font-size: 4rem;
   font-weight: 300;
-  line-height: 13rem;
-  color: white;
-  margin-top: 13rem;
+  line-height: 1.3;
+  color: #fff;
+  margin-top: 20rem;
 }
 #main .content h1:before {
   display: none;
@@ -3142,7 +3173,7 @@ h1:before {
 
 #values .values {
   display: inline-block;
-  margin: 9rem 0;
+  margin: 9rem 0 0rem 0;
 }
 #values .values ul {
   margin-top: 3rem;
@@ -3176,4 +3207,39 @@ h1:before {
   width: 8rem;
   text-align: center;
   color: #9db1c0;
+}
+
+#team {
+  padding: 6rem 0;
+  background: #2b2b2d;
+  color: #d7d7d7;
+}
+#team h1 {
+  color: #fff;
+}
+#team .team {
+  display: inline-block;
+}
+#team .team li {
+  display: inline-block;
+  list-style-type: none;
+  text-align: center;
+  margin: 3rem 0;
+}
+#team .team li .avatar {
+  border-radius: 50%;
+  background: #000;
+  width: 15rem;
+  margin: 0 auto;
+  height: 15rem;
+  overflow: hidden;
+  display: table;
+}
+#team .team li h3 {
+  color: #e0e0e0;
+}
+#team .team li p {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #7e7e7f;
 }

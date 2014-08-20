@@ -10,6 +10,7 @@
 		color: #fff;
 	}
 	.team{
+		display: inline-block;
 		li{
 			.avatar{
 				border-radius: 50%;
@@ -21,13 +22,13 @@
 				display: table;
 			}
 			display: inline-block;
-			width: 24.7%;
+			@extend .columns, .large-3;
 			list-style-type: none;
 			text-align: center;
 			margin: 3rem 0;
 			h3{
 				color:#e0e0e0;
-				font-weight: 500;
+
 			}
 			p{
 				text-transform: uppercase;

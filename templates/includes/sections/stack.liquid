@@ -1,12 +1,12 @@
 <div id="stack">
 	<div class="content">
 		<h1>{{global.index.sections[2].title}}</h1>
-		<ul class="stack">
+		<div class="stack">
 		{% for item in global.index.sections[2].stack %}
-			<li>
+			<div class="item">
 				<a href="{{item.url}}"><img src="{{item.imageUrl}}" alt="{{item.name}}"></a>
-			</li>
+			</div>
 		{% endfor %}
-		</ul>
+		</div>
 	</div>
 </div>

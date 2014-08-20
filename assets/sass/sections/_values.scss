@@ -21,9 +21,9 @@ $values__font-color: #9DB1C0 !default;
 			font-family: "Open Sans";
 			font-weight:500;
 		}
-		li{
+		.item{
 			list-style-type: none;
-			width:33%;
+			@extend .columns,.large-4;
 			float:left;
 			text-align: center;
 			min-height: 23rem;
