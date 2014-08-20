@@ -23,11 +23,20 @@
  */
 @import "breakpoints/baseline";
 
-
+/**
+██╗███╗   ██╗ ██████╗██╗     ██╗   ██╗██████╗ ███████╗███████╗
+██║████╗  ██║██╔════╝██║     ██║   ██║██╔══██╗██╔════╝██╔════╝
+██║██╔██╗ ██║██║     ██║     ██║   ██║██║  ██║█████╗  ███████╗
+██║██║╚██╗██║██║     ██║     ██║   ██║██║  ██║██╔══╝  ╚════██║
+██║██║ ╚████║╚██████╗███████╗╚██████╔╝██████╔╝███████╗███████║
+╚═╝╚═╝  ╚═══╝ ╚═════╝╚══════╝ ╚═════╝ ╚═════╝ ╚══════╝╚══════╝
+**/
 @import "includes/type";
 @import 'includes/header';
 @import 'includes/nav';
 @import "includes/helpers";
+@import "includes/animation";
+
 
 
 
@@ -70,3 +79,4 @@ body,html{
 }
 p{font-size:1em;}
 
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
