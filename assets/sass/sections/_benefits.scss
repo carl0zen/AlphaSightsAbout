@@ -9,6 +9,8 @@
 #benefits{
 	background: $blue ;
 	padding: 2rem 0 5rem;
+	background: url(../img/section__benefits--bg.png) no-repeat center;
+	@include background-size(cover);
 	h1, &, h3{color:$white}
 	ul{display: inline-block;}
 	li{position:relative;list-style-type: none; @extend .medium-6;float:left;padding: 10px; padding-left:13%;}
