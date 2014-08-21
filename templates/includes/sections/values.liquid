@@ -1,14 +1,16 @@
 <div id="values">
-	<div class="content">
-		<h1>{{global.index.sections[0].title}}</h1>
-		<div class="values">
-		{% for item in global.index.sections[0].values %}
-			<div class="item">
-				<span class="icon ">{{item.icon}}</span>
-				<h3>{{item.title}}</h3>
-				<p>{{item.description}}</p>
+	<div data-animated="fadeInLeft" class="animated">
+		<div class="content">
+			<h1>{{global.index.sections[0].title}}</h1>
+			<div class="values">
+			{% for item in global.index.sections[0].values %}
+				<div class="item">
+					<span class="icon" >{{item.icon}}</span>
+					<h3>{{item.title}}</h3>
+					<p>{{item.description}}</p>
+				</div>
+			{% endfor %}
 			</div>
-		{% endfor %}
 		</div>
 	</div>
 </div>

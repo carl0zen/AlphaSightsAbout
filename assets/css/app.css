@@ -157,6 +157,7 @@ $header-bottom-margin:**/
  */
 @import "http://fonts.googleapis.com/css?family=Open+Sans:300,600,400";
 @import "https://fontastic.s3.amazonaws.com/QD6XZevxhSidosxa6jfTdH/icons.css";
+@import 'http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css';
 article,
 aside,
 details,
@@ -3672,6 +3673,9 @@ meta.foundation-mq-topbar {
   background-size: cover;
   height: 950px;
   color: white;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  animation-delay: 2s;
 }
 #main .content {
   text-align: center;

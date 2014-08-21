@@ -936,8 +936,8 @@ header nav li {
   display: inline-block;
 }
 
-footer {
-  color: rgba(83, 109, 129, 0.26);
+.page-foot .copy {
+  color: rgba(0, 0, 0, 0.26);
 }
 
 nav a {
@@ -1257,7 +1257,8 @@ header .row.collapse > nav,
 #values .values .row.collapse > .item,
 #team .team .row.collapse > li,
 #stack .row.collapse > .item,
-#positions .content.row.collapse > div {
+#positions .content.row.collapse > div,
+#positions .row.collapse > p {
   padding-left: 0;
   padding-right: 0;
 }
@@ -1300,7 +1301,8 @@ header nav,
 #values .values .item,
 #team .team li,
 #stack .item,
-#positions .content > div {
+#positions .content > div,
+#positions p {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   width: 100%;
@@ -1467,7 +1469,8 @@ header nav,
   #values .values .item,
   #team .team li,
   #stack .item,
-  #positions .content > div {
+  #positions .content > div,
+  #positions p {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1585,7 +1588,8 @@ header nav,
   #values .values .small-centered.item,
   #team .team li.small-centered,
   #stack .small-centered.item,
-  #positions .content > div.small-centered {
+  #positions .content > div.small-centered,
+  #positions p.small-centered {
     margin-left: auto;
     margin-right: auto;
     float: none;
@@ -1598,7 +1602,8 @@ header nav,
   #values .values .small-uncentered.item,
   #team .team li.small-uncentered,
   #stack .small-uncentered.item,
-  #positions .content > div.small-uncentered {
+  #positions .content > div.small-uncentered,
+  #positions p.small-uncentered {
     margin-left: 0;
     margin-right: 0;
     float: left;
@@ -1611,7 +1616,8 @@ header nav,
   #values .values .small-centered.item:last-child,
   #team .team li.small-centered:last-child,
   #stack .small-centered.item:last-child,
-  #positions .content > div.small-centered:last-child {
+  #positions .content > div.small-centered:last-child,
+  #positions p.small-centered:last-child {
     float: none;
   }
 
@@ -1622,7 +1628,8 @@ header nav,
   #values .values .small-uncentered.item:last-child,
   #team .team li.small-uncentered:last-child,
   #stack .small-uncentered.item:last-child,
-  #positions .content > div.small-uncentered:last-child {
+  #positions .content > div.small-uncentered:last-child,
+  #positions p.small-uncentered:last-child {
     float: left;
   }
 
@@ -1633,7 +1640,8 @@ header nav,
   #values .values .small-uncentered.opposite.item,
   #team .team li.small-uncentered.opposite,
   #stack .small-uncentered.opposite.item,
-  #positions .content > div.small-uncentered.opposite {
+  #positions .content > div.small-uncentered.opposite,
+  #positions p.small-uncentered.opposite {
     float: right;
   }
 }
@@ -1789,7 +1797,8 @@ header nav,
   #values .values .item,
   #team .team li,
   #stack .item,
-  #positions .content > div {
+  #positions .content > div,
+  #positions p {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1840,7 +1849,7 @@ header nav,
     width: 91.66667%;
   }
 
-  .medium-12 {
+  .medium-12, #positions p {
     width: 100%;
   }
 
@@ -1900,14 +1909,19 @@ header nav,
     float: left;
   }
 
-  .column.medium-centered,
+  .column.medium-centered, #positions p.column,
   .columns.medium-centered,
   header .medium-centered.logo,
   header nav.medium-centered,
   #values .values .medium-centered.item,
+  #values .values #positions p.item,
+  #positions #values .values p.item,
   #team .team li.medium-centered,
   #stack .medium-centered.item,
-  #positions .content > div.medium-centered {
+  #stack #positions p.item,
+  #positions #stack p.item,
+  #positions .content > div.medium-centered,
+  #positions p {
     margin-left: auto;
     margin-right: auto;
     float: none;
@@ -1920,20 +1934,24 @@ header nav,
   #values .values .medium-uncentered.item,
   #team .team li.medium-uncentered,
   #stack .medium-uncentered.item,
-  #positions .content > div.medium-uncentered {
+  #positions .content > div.medium-uncentered,
+  #positions p.medium-uncentered {
     margin-left: 0;
     margin-right: 0;
     float: left;
   }
 
-  .column.medium-centered:last-child,
+  .column.medium-centered:last-child, #positions p.column:last-child,
   .columns.medium-centered:last-child,
   header .medium-centered.logo:last-child,
   header nav.medium-centered:last-child,
   #values .values .medium-centered.item:last-child,
+  #values .values #positions p.item:last-child,
+  #positions #values .values p.item:last-child,
   #team .team li.medium-centered:last-child,
   #stack .medium-centered.item:last-child,
-  #positions .content > div.medium-centered:last-child {
+  #positions .content > div.medium-centered:last-child,
+  #positions p:last-child {
     float: none;
   }
 
@@ -1944,7 +1962,8 @@ header nav,
   #values .values .medium-uncentered.item:last-child,
   #team .team li.medium-uncentered:last-child,
   #stack .medium-uncentered.item:last-child,
-  #positions .content > div.medium-uncentered:last-child {
+  #positions .content > div.medium-uncentered:last-child,
+  #positions p.medium-uncentered:last-child {
     float: left;
   }
 
@@ -1955,7 +1974,8 @@ header nav,
   #values .values .medium-uncentered.opposite.item,
   #team .team li.medium-uncentered.opposite,
   #stack .medium-uncentered.opposite.item,
-  #positions .content > div.medium-uncentered.opposite {
+  #positions .content > div.medium-uncentered.opposite,
+  #positions p.medium-uncentered.opposite {
     float: right;
   }
 
@@ -2255,7 +2275,8 @@ header nav,
   #values .values .item,
   #team .team li,
   #stack .item,
-  #positions .content > div {
+  #positions .content > div,
+  #positions p {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -2373,7 +2394,8 @@ header nav,
   #values .values .large-centered.item,
   #team .team li.large-centered,
   #stack .large-centered.item,
-  #positions .content > div.large-centered {
+  #positions .content > div.large-centered,
+  #positions p.large-centered {
     margin-left: auto;
     margin-right: auto;
     float: none;
@@ -2386,7 +2408,8 @@ header nav,
   #values .values .large-uncentered.item,
   #team .team li.large-uncentered,
   #stack .large-uncentered.item,
-  #positions .content > div.large-uncentered {
+  #positions .content > div.large-uncentered,
+  #positions p.large-uncentered {
     margin-left: 0;
     margin-right: 0;
     float: left;
@@ -2399,7 +2422,8 @@ header nav,
   #values .values .large-centered.item:last-child,
   #team .team li.large-centered:last-child,
   #stack .large-centered.item:last-child,
-  #positions .content > div.large-centered:last-child {
+  #positions .content > div.large-centered:last-child,
+  #positions p.large-centered:last-child {
     float: none;
   }
 
@@ -2410,7 +2434,8 @@ header nav,
   #values .values .large-uncentered.item:last-child,
   #team .team li.large-uncentered:last-child,
   #stack .large-uncentered.item:last-child,
-  #positions .content > div.large-uncentered:last-child {
+  #positions .content > div.large-uncentered:last-child,
+  #positions p.large-uncentered:last-child {
     float: left;
   }
 
@@ -2421,7 +2446,8 @@ header nav,
   #values .values .large-uncentered.opposite.item,
   #team .team li.large-uncentered.opposite,
   #stack .large-uncentered.opposite.item,
-  #positions .content > div.large-uncentered.opposite {
+  #positions .content > div.large-uncentered.opposite,
+  #positions p.large-uncentered.opposite {
     float: right;
   }
 
@@ -3732,7 +3758,11 @@ meta.foundation-mq-topbar {
 */
 #team {
   padding: 6rem 0;
-  background: #2b2b2d;
+  background: #2b2b2d url(../img/section__team--bg.png) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: #d7d7d7;
 }
 #team h1 {
@@ -3785,9 +3815,9 @@ meta.foundation-mq-topbar {
   border-right: 1px solid rgba(157, 177, 192, 0.26);
   border-bottom: 1px solid rgba(157, 177, 192, 0.26);
   text-align: center;
-  min-height: 5em;
+  min-height: 13em;
   display: table;
-  line-height: 8rem;
+  line-height: 13rem;
 }
 #stack .item a {
   display: table-cell;
@@ -3864,6 +3894,11 @@ meta.foundation-mq-topbar {
 #benefits {
   background: #2f87c3;
   padding: 2rem 0 5rem;
+  background: url(../img/section__benefits--bg.png) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 #benefits h1, #benefits, #benefits h3 {
   color: #fefefe;
@@ -3902,18 +3937,31 @@ meta.foundation-mq-topbar {
 */
 #positions {
   display: inline-block;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   width: 100%;
   color: rgba(63, 83, 98, 0.26);
+}
+#positions:before {
+  background: url(../img/section__positions--bg.png) no-repeat center;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  z-index: -1;
 }
 #positions ul {
   padding: 0;
 }
 #positions .content {
-  margin: 0 auto;
+  min-height: 45em;
 }
 #positions p {
   text-align: center;
-  padding: 2rem 15rem;
+  font-size: 1.2em;
+  padding: 3% 13%;
 }
 #positions h3 {
   color: #ff762a;

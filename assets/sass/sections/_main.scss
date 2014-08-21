@@ -11,6 +11,12 @@
 	background-size: cover;
 	height:950px;
 	color:white;
+	-webkit-animation-duration:3s;
+	animation-duration:3s;
+	animation-delay:2s;
+	> div{
+
+	}
 	.content{
 		text-align: center;
 		h1{
