@@ -233,12 +233,12 @@
 					{
 						"title": "Your Work Matters",
 						"description": "From prototyping experimental features to redesigning our backend architecture, everyone on the team has input",
-						"icon": "nodes"
+						"icon": "branch"
 					},
 					{
 						"title": "Amazing People",
 						"description": "We are an international company with fantastic mix of entrepreneurship, technical know-how and leadership",
-						"icon": "people"
+						"icon": "amazing"
 
 					},
 					{
@@ -249,7 +249,7 @@
 					{
 						"title": "Social Events",
 						"description": "We like to have fun together outside, so whether its going on a company retrat to Ibiza, running a marathon in Nice something going on",
-						"icon": "game"
+						"icon": "event"
 					},
 					{
 						"title": "We're Hackers",
