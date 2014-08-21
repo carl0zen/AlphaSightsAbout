@@ -11,10 +11,10 @@
 	padding: 2rem 0 5rem;
 	h1, &, h3{color:$white}
 	ul{display: inline-block;}
-	li{position:relative;list-style-type: none; @extend .medium-6;float:left;padding: 10px; padding-left:10em;}
+	li{position:relative;list-style-type: none; @extend .medium-6;float:left;padding: 10px; padding-left:13%;}
 	.icon{
 		font-size: 3em;
-		margin-left: -2.7em;
+		margin-left: -13%;
 		position: absolute;
 		top: 1.3em;
 		line-height: 1.5em;

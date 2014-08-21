@@ -1,0 +1,45 @@
+/*
+██████╗  ██████╗ ███████╗██╗████████╗██╗ ██████╗ ███╗   ██╗███████╗
+██╔══██╗██╔═══██╗██╔════╝██║╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
+██████╔╝██║   ██║███████╗██║   ██║   ██║██║   ██║██╔██╗ ██║███████╗
+██╔═══╝ ██║   ██║╚════██║██║   ██║   ██║██║   ██║██║╚██╗██║╚════██║
+██║     ╚██████╔╝███████║██║   ██║   ██║╚██████╔╝██║ ╚████║███████║
+╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+*/
+#positions{
+	display:inline-block;
+	width:100%;
+	ul{padding:0}
+	.content{
+		margin:0 auto;
+	}
+	.content > div{
+		@extend .large-4,.columns;
+	}
+	p{text-align: center;padding: 2rem 15rem;}
+	color:darken($gray,37%);
+	h3{
+		color:$orange;
+	}
+
+	li {
+		list-style-type: none;
+		a{
+			background: white;
+			border: 1px solid $gray;
+			text-decoration: none;
+			display: block;
+			line-height: 2em;
+			padding: 0.5em 2em;
+			margin:0 1em 0.5em 0;
+			font-weight: 500;
+			color: darken($gray, 90%);
+			&:hover{
+				background: lighten($gray,30%);
+				color: darken($gray, 100%);
+			}
+		}
+	}
+
+
+}
