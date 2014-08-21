@@ -3843,13 +3843,13 @@ meta.foundation-mq-topbar {
   font-size: 3em;
 }
 #fun .content .orbit-prev:before {
-  content: 'o';
+  content: '1';
 }
 #fun .content .orbit-next span {
   display: none;
 }
 #fun .content .orbit-next:before {
-  content: 'p';
+  content: '2';
   left: -0.5em;
 }
 

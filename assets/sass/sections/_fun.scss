@@ -51,14 +51,14 @@
 		.orbit-prev{
 			
 			&:before {
-				content: 'o';
+				content: '1';
 				
 			}
 		}
 		.orbit-next{
 			span{display: none;}
 			&:before {
-				content: 'p';
+				content: '2';
 				left: -0.5em;
 			}
 

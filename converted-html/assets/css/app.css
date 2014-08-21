@@ -936,6 +936,10 @@ header nav li {
   display: inline-block;
 }
 
+footer {
+  color: rgba(83, 109, 129, 0.26);
+}
+
 nav a {
   text-transform: uppercase;
   margin: 0 1em;
@@ -1252,7 +1256,8 @@ header .row.collapse > .logo,
 header .row.collapse > nav,
 #values .values .row.collapse > .item,
 #team .team .row.collapse > li,
-#stack .row.collapse > .item {
+#stack .row.collapse > .item,
+#positions .content.row.collapse > div {
   padding-left: 0;
   padding-right: 0;
 }
@@ -1294,7 +1299,8 @@ header .logo,
 header nav,
 #values .values .item,
 #team .team li,
-#stack .item {
+#stack .item,
+#positions .content > div {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   width: 100%;
@@ -1460,7 +1466,8 @@ header nav,
   header nav,
   #values .values .item,
   #team .team li,
-  #stack .item {
+  #stack .item,
+  #positions .content > div {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1577,7 +1584,8 @@ header nav,
   header nav.small-centered,
   #values .values .small-centered.item,
   #team .team li.small-centered,
-  #stack .small-centered.item {
+  #stack .small-centered.item,
+  #positions .content > div.small-centered {
     margin-left: auto;
     margin-right: auto;
     float: none;
@@ -1589,7 +1597,8 @@ header nav,
   header nav.small-uncentered,
   #values .values .small-uncentered.item,
   #team .team li.small-uncentered,
-  #stack .small-uncentered.item {
+  #stack .small-uncentered.item,
+  #positions .content > div.small-uncentered {
     margin-left: 0;
     margin-right: 0;
     float: left;
@@ -1601,7 +1610,8 @@ header nav,
   header nav.small-centered:last-child,
   #values .values .small-centered.item:last-child,
   #team .team li.small-centered:last-child,
-  #stack .small-centered.item:last-child {
+  #stack .small-centered.item:last-child,
+  #positions .content > div.small-centered:last-child {
     float: none;
   }
 
@@ -1611,7 +1621,8 @@ header nav,
   header nav.small-uncentered:last-child,
   #values .values .small-uncentered.item:last-child,
   #team .team li.small-uncentered:last-child,
-  #stack .small-uncentered.item:last-child {
+  #stack .small-uncentered.item:last-child,
+  #positions .content > div.small-uncentered:last-child {
     float: left;
   }
 
@@ -1621,7 +1632,8 @@ header nav,
   header nav.small-uncentered.opposite,
   #values .values .small-uncentered.opposite.item,
   #team .team li.small-uncentered.opposite,
-  #stack .small-uncentered.opposite.item {
+  #stack .small-uncentered.opposite.item,
+  #positions .content > div.small-uncentered.opposite {
     float: right;
   }
 }
@@ -1776,7 +1788,8 @@ header nav,
   header nav,
   #values .values .item,
   #team .team li,
-  #stack .item {
+  #stack .item,
+  #positions .content > div {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1893,7 +1906,8 @@ header nav,
   header nav.medium-centered,
   #values .values .medium-centered.item,
   #team .team li.medium-centered,
-  #stack .medium-centered.item {
+  #stack .medium-centered.item,
+  #positions .content > div.medium-centered {
     margin-left: auto;
     margin-right: auto;
     float: none;
@@ -1905,7 +1919,8 @@ header nav,
   header nav.medium-uncentered,
   #values .values .medium-uncentered.item,
   #team .team li.medium-uncentered,
-  #stack .medium-uncentered.item {
+  #stack .medium-uncentered.item,
+  #positions .content > div.medium-uncentered {
     margin-left: 0;
     margin-right: 0;
     float: left;
@@ -1917,7 +1932,8 @@ header nav,
   header nav.medium-centered:last-child,
   #values .values .medium-centered.item:last-child,
   #team .team li.medium-centered:last-child,
-  #stack .medium-centered.item:last-child {
+  #stack .medium-centered.item:last-child,
+  #positions .content > div.medium-centered:last-child {
     float: none;
   }
 
@@ -1927,7 +1943,8 @@ header nav,
   header nav.medium-uncentered:last-child,
   #values .values .medium-uncentered.item:last-child,
   #team .team li.medium-uncentered:last-child,
-  #stack .medium-uncentered.item:last-child {
+  #stack .medium-uncentered.item:last-child,
+  #positions .content > div.medium-uncentered:last-child {
     float: left;
   }
 
@@ -1937,7 +1954,8 @@ header nav,
   header nav.medium-uncentered.opposite,
   #values .values .medium-uncentered.opposite.item,
   #team .team li.medium-uncentered.opposite,
-  #stack .medium-uncentered.opposite.item {
+  #stack .medium-uncentered.opposite.item,
+  #positions .content > div.medium-uncentered.opposite {
     float: right;
   }
 
@@ -2236,7 +2254,8 @@ header nav,
   header nav,
   #values .values .item,
   #team .team li,
-  #stack .item {
+  #stack .item,
+  #positions .content > div {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -2255,7 +2274,7 @@ header nav,
     width: 25%;
   }
 
-  .large-4, #values .values .item {
+  .large-4, #values .values .item, #positions .content > div {
     width: 33.33333%;
   }
 
@@ -2353,7 +2372,8 @@ header nav,
   header nav.large-centered,
   #values .values .large-centered.item,
   #team .team li.large-centered,
-  #stack .large-centered.item {
+  #stack .large-centered.item,
+  #positions .content > div.large-centered {
     margin-left: auto;
     margin-right: auto;
     float: none;
@@ -2365,7 +2385,8 @@ header nav,
   header nav.large-uncentered,
   #values .values .large-uncentered.item,
   #team .team li.large-uncentered,
-  #stack .large-uncentered.item {
+  #stack .large-uncentered.item,
+  #positions .content > div.large-uncentered {
     margin-left: 0;
     margin-right: 0;
     float: left;
@@ -2377,7 +2398,8 @@ header nav,
   header nav.large-centered:last-child,
   #values .values .large-centered.item:last-child,
   #team .team li.large-centered:last-child,
-  #stack .large-centered.item:last-child {
+  #stack .large-centered.item:last-child,
+  #positions .content > div.large-centered:last-child {
     float: none;
   }
 
@@ -2387,7 +2409,8 @@ header nav,
   header nav.large-uncentered:last-child,
   #values .values .large-uncentered.item:last-child,
   #team .team li.large-uncentered:last-child,
-  #stack .large-uncentered.item:last-child {
+  #stack .large-uncentered.item:last-child,
+  #positions .content > div.large-uncentered:last-child {
     float: left;
   }
 
@@ -2397,7 +2420,8 @@ header nav,
   header nav.large-uncentered.opposite,
   #values .values .large-uncentered.opposite.item,
   #team .team li.large-uncentered.opposite,
-  #stack .large-uncentered.opposite.item {
+  #stack .large-uncentered.opposite.item,
+  #positions .content > div.large-uncentered.opposite {
     float: right;
   }
 
@@ -3819,13 +3843,13 @@ meta.foundation-mq-topbar {
   font-size: 3em;
 }
 #fun .content .orbit-prev:before {
-  content: 'o';
+  content: '1';
 }
 #fun .content .orbit-next span {
   display: none;
 }
 #fun .content .orbit-next:before {
-  content: 'p';
+  content: '2';
   left: -0.5em;
 }
 
@@ -3852,11 +3876,11 @@ meta.foundation-mq-topbar {
   list-style-type: none;
   float: left;
   padding: 10px;
-  padding-left: 10em;
+  padding-left: 13%;
 }
 #benefits .icon {
   font-size: 3em;
-  margin-left: -2.7em;
+  margin-left: -13%;
   position: absolute;
   top: 1.3em;
   line-height: 1.5em;
@@ -3866,6 +3890,51 @@ meta.foundation-mq-topbar {
   background: #ff762a;
   height: 1.5em;
   border-radius: 0.1em;
+}
+
+/*
+██████╗  ██████╗ ███████╗██╗████████╗██╗ ██████╗ ███╗   ██╗███████╗
+██╔══██╗██╔═══██╗██╔════╝██║╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
+██████╔╝██║   ██║███████╗██║   ██║   ██║██║   ██║██╔██╗ ██║███████╗
+██╔═══╝ ██║   ██║╚════██║██║   ██║   ██║██║   ██║██║╚██╗██║╚════██║
+██║     ╚██████╔╝███████║██║   ██║   ██║╚██████╔╝██║ ╚████║███████║
+╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+*/
+#positions {
+  display: inline-block;
+  width: 100%;
+  color: rgba(63, 83, 98, 0.26);
+}
+#positions ul {
+  padding: 0;
+}
+#positions .content {
+  margin: 0 auto;
+}
+#positions p {
+  text-align: center;
+  padding: 2rem 15rem;
+}
+#positions h3 {
+  color: #ff762a;
+}
+#positions li {
+  list-style-type: none;
+}
+#positions li a {
+  background: white;
+  border: 1px solid rgba(157, 177, 192, 0.26);
+  text-decoration: none;
+  display: block;
+  line-height: 2em;
+  padding: 0.5em 2em;
+  margin: 0 1em 0.5em 0;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.26);
+}
+#positions li a:hover {
+  background: rgba(250, 251, 252, 0.26);
+  color: rgba(0, 0, 0, 0.26);
 }
 
 .content {
@@ -3878,10 +3947,4 @@ body, html {
 
 p {
   font-size: 1em;
-}
-
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
