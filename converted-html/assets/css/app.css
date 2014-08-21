@@ -878,6 +878,14 @@ pre {
   margin-top: 5em;
 }
 
+/**
+██╗███╗   ██╗ ██████╗██╗     ██╗   ██╗██████╗ ███████╗███████╗
+██║████╗  ██║██╔════╝██║     ██║   ██║██╔══██╗██╔════╝██╔════╝
+██║██╔██╗ ██║██║     ██║     ██║   ██║██║  ██║█████╗  ███████╗
+██║██║╚██╗██║██║     ██║     ██║   ██║██║  ██║██╔══╝  ╚════██║
+██║██║ ╚████║╚██████╗███████╗╚██████╔╝██████╔╝███████╗███████║
+╚═╝╚═╝  ╚═══╝ ╚═════╝╚══════╝ ╚═════╝ ╚═════╝ ╚══════╝╚══════╝
+**/
 h1, h2, h3, h4 {
   font-weight: 500;
   color: #71777b;
@@ -1078,6 +1086,13 @@ nav a {
   background-attachment: fixed;
   background-position: top center;
   background-origin: border-box;
+}
+
+a, a:before {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 /**
@@ -3719,16 +3734,55 @@ meta.foundation-mq-topbar {
 }
 
 #fun {
-  margin: 6rem 0 9rem;
+  padding: 5rem 0;
   background: rgba(219, 226, 232, 0.26);
   text-align: center;
   color: #71777b;
 }
+#fun .orbit-bullets li {
+  background: #2f87c3;
+}
+#fun .orbit-bullets li.active {
+  background: #1b4e71;
+}
+#fun .orbit-bullets li:hover {
+  color: #79b6df;
+}
 #fun .fun {
-  margin: 6rem 0 0;
+  margin: 3rem auto 0 0;
 }
 #fun .fun img {
   margin: 0 auto;
+}
+#fun .content .orbit-prev:hover, #fun .content .orbit-next:hover {
+  background: none;
+  text-decoration: none;
+}
+#fun .content .orbit-prev:hover:before, #fun .content .orbit-next:hover:before {
+  color: #5ca6d8;
+}
+#fun .content .orbit-prev span, #fun .content .orbit-next span {
+  display: none;
+}
+#fun .content .orbit-prev:before, #fun .content .orbit-next:before {
+  position: relative;
+  display: block;
+  top: 0;
+  color: #2f87c3;
+  width: auto;
+  text-indent: 0;
+  font-family: alphasights;
+  font-size: 3em;
+}
+#fun .content .orbit-prev:before {
+  content: 'o';
+}
+#fun .content .orbit-next span {
+  display: none;
+}
+#fun .content .orbit-next:before {
+  content: 'p';
+  left: -0.5em;
 }
 
 .content {
@@ -3741,4 +3795,10 @@ body, html {
 
 p {
   font-size: 1em;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }

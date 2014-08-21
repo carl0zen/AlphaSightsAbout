@@ -155,8 +155,7 @@ $header-bottom-margin:**/
 /*
  *  Corrects `block` display not defined in IE 8/9.
  */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,600,400);
-@import url(https://fontastic.s3.amazonaws.com/QD6XZevxhSidosxa6jfTdH/icons.css);
+@import "http://fonts.googleapis.com/css?family=Open+Sans:300,600,400";
 @import "https://fontastic.s3.amazonaws.com/QD6XZevxhSidosxa6jfTdH/icons.css";
 article,
 aside,
@@ -535,6 +534,11 @@ textarea:focus {
 
 h1 {
   font-size: 1rem;
+}
+
+.icon {
+  font-family: "alphasights";
+  font-weight: 300;
 }
 
 /*
@@ -1799,7 +1803,7 @@ header nav,
     width: 41.66667%;
   }
 
-  .medium-6 {
+  .medium-6, #benefits li {
     width: 50%;
   }
 
@@ -3605,6 +3609,14 @@ meta.foundation-mq-topbar {
 ███████║███████╗╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║
 ╚══════╝╚══════╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
 **/
+/*
+███╗   ███╗ █████╗ ██╗███╗   ██╗
+████╗ ████║██╔══██╗██║████╗  ██║
+██╔████╔██║███████║██║██╔██╗ ██║
+██║╚██╔╝██║██╔══██║██║██║╚██╗██║
+██║ ╚═╝ ██║██║  ██║██║██║ ╚████║
+╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
+*/
 #main {
   background: url(../img/stage__bg.jpg);
   background-size: cover;
@@ -3641,6 +3653,14 @@ meta.foundation-mq-topbar {
   margin: 15rem auto;
 }
 
+/*
+██╗   ██╗ █████╗ ██╗     ██╗   ██╗███████╗███████╗
+██║   ██║██╔══██╗██║     ██║   ██║██╔════╝██╔════╝
+██║   ██║███████║██║     ██║   ██║█████╗  ███████╗
+╚██╗ ██╔╝██╔══██║██║     ██║   ██║██╔══╝  ╚════██║
+ ╚████╔╝ ██║  ██║███████╗╚██████╔╝███████╗███████║
+  ╚═══╝  ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚══════╝╚══════╝
+*/
 #values .values {
   display: inline-block;
   margin: 9rem 0 6rem;
@@ -3678,6 +3698,14 @@ meta.foundation-mq-topbar {
   color: #9db1c0;
 }
 
+/*
+████████╗███████╗ █████╗ ███╗   ███╗
+╚══██╔══╝██╔════╝██╔══██╗████╗ ████║
+   ██║   █████╗  ███████║██╔████╔██║
+   ██║   ██╔══╝  ██╔══██║██║╚██╔╝██║
+   ██║   ███████╗██║  ██║██║ ╚═╝ ██║
+   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝
+*/
 #team {
   padding: 6rem 0;
   background: #2b2b2d;
@@ -3713,6 +3741,14 @@ meta.foundation-mq-topbar {
   color: #7e7e7f;
 }
 
+/*
+███████╗████████╗ █████╗  ██████╗██╗  ██╗
+██╔════╝╚══██╔══╝██╔══██╗██╔════╝██║ ██╔╝
+███████╗   ██║   ███████║██║     █████╔╝ 
+╚════██║   ██║   ██╔══██║██║     ██╔═██╗ 
+███████║   ██║   ██║  ██║╚██████╗██║  ██╗
+╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
+*/
 #stack {
   margin: 6rem 0 9rem;
 }
@@ -3733,6 +3769,14 @@ meta.foundation-mq-topbar {
   display: table-cell;
 }
 
+/*
+███████╗██╗   ██╗███╗   ██╗
+██╔════╝██║   ██║████╗  ██║
+█████╗  ██║   ██║██╔██╗ ██║
+██╔══╝  ██║   ██║██║╚██╗██║
+██║     ╚██████╔╝██║ ╚████║
+╚═╝      ╚═════╝ ╚═╝  ╚═══╝
+*/
 #fun {
   padding: 5rem 0;
   background: rgba(219, 226, 232, 0.26);
@@ -3783,6 +3827,45 @@ meta.foundation-mq-topbar {
 #fun .content .orbit-next:before {
   content: 'p';
   left: -0.5em;
+}
+
+/*
+██████╗ ███████╗███╗   ██╗███████╗███████╗██╗████████╗███████╗
+██╔══██╗██╔════╝████╗  ██║██╔════╝██╔════╝██║╚══██╔══╝██╔════╝
+██████╔╝█████╗  ██╔██╗ ██║█████╗  █████╗  ██║   ██║   ███████╗
+██╔══██╗██╔══╝  ██║╚██╗██║██╔══╝  ██╔══╝  ██║   ██║   ╚════██║
+██████╔╝███████╗██║ ╚████║███████╗██║     ██║   ██║   ███████║
+╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝     ╚═╝   ╚═╝   ╚══════╝
+*/
+#benefits {
+  background: #2f87c3;
+  padding: 2rem 0 5rem;
+}
+#benefits h1, #benefits, #benefits h3 {
+  color: #fefefe;
+}
+#benefits ul {
+  display: inline-block;
+}
+#benefits li {
+  position: relative;
+  list-style-type: none;
+  float: left;
+  padding: 10px;
+  padding-left: 10em;
+}
+#benefits .icon {
+  font-size: 3em;
+  margin-left: -2.7em;
+  position: absolute;
+  top: 1.3em;
+  line-height: 1.5em;
+  text-align: center;
+  display: block;
+  width: 1.5em;
+  background: #ff762a;
+  height: 1.5em;
+  border-radius: 0.1em;
 }
 
 .content {

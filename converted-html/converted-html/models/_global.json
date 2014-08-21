@@ -1,0 +1,359 @@
+{
+	"title": "We are the <strong>Software Engineering</strong> team",
+	"intro": "Building software that makes things happen at AlphaSights",
+	"twitter": "@AlphaSights",
+	"googleanalytics": "",
+	"author": "@carlosepp",
+	"email": "carlosepp@gmail.com",
+	"menu":[
+		{
+			"name": "About Us",
+			"link": "#about"
+		},
+		{
+			"name": "Our Values",
+			"link": "#values"
+		},
+		{
+			"name": "Our Team",
+			"link": "#team"
+		},
+		{
+			"name": "Benefits",
+			"link": "#benefits"
+		},
+		{
+			"name": "Open Positions",
+			"link": "#positions"
+		}
+	],
+	"index":{
+		"title": "We are THE Software Development team",
+		"intro": "Building software that makes things happen at AlphaSights",
+		"sections":[
+			{
+				"title": "Our Values",
+				"values": [
+					{
+						"title": "Humble",
+						"description": "We value feedback on our work, whether it is positive or negative feedback",
+						"icon": "a"
+					},
+					{
+						"title": "Naturally interested in programming",
+						"description": "We would be programming for fun even if it wasn't our job",
+						"icon": "b"
+					},
+					{
+						"title": "Care about things",
+						"description": "We have original viewpoints and like to argue our case",
+						"icon": "c"
+					},
+					{
+						"title":"Teachers",
+						"description": "We enjoy the process of bringing others up to speed",
+						"icon": "d"
+					},
+					{
+						"title": "Community connected",
+						"description": "We know what is going on around us in the development community.",
+						"icon": "e"
+					}
+				]
+			},
+			{
+				"title": "Our Team",
+				"team":[
+					{
+						"name": "Tor Erik Linnerud",
+						"role": "Lead Developer",
+						"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
+						"imageUrl": "assets/img/team__1.png",
+						"url": "team/1"
+
+					},
+					{
+						"name":"Andrei Popa",
+						"role":"Lead Developer",
+						"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
+						"imageUrl": "assets/img/team__2.png",
+						"url": "team/2"
+					},
+					{
+						"name": "David Griffiths",
+						"role": "Lead Developer",
+						"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
+						"imageUrl": "assets/img/team__3.png",
+						"url": "team/3"
+					},
+					{
+						"name": "John Bohn",
+						"role": "Lead Developer",
+						"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
+						"imageUrl": "assets/img/team__4.png",
+						"url": "team/4"
+					},
+					{
+						"name": "Zsombor Dee",
+						"role": "Lead Developer",
+						"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
+						"imageUrl": "assets/img/team__5.png",
+						"url": "team/5"
+					},
+					{
+						"name": "Ju Liu",
+						"role": "Lead Developer",
+						"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
+						"imageUrl": "assets/img/team__6.png",
+						"url": "team/6"
+					},
+					{
+						"name": "Damon Aw",
+						"role": "Lead Developer",
+						"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
+						"imageUrl": "assets/img/team__7.png",
+						"url": "team/7"
+					},
+					{
+						"name": "Aluísio Azevedo",
+						"role": "Lead Developer",
+						"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
+						"imageUrl": "assets/img/team__8.png",
+						"url": "team/8"
+					},
+					{
+						"name": "Tor Erik Linnerud",
+						"role": "Lead Developer",
+						"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi officiis sit eius maiores totam ullam doloribus sint fugit suscipit nostrum culpa, nemo libero iusto, aut porro vero architecto dolores laudantium.",
+						"imageUrl": "assets/img/team__1.png",
+						"url": "team/9"
+					}
+				]
+			},
+			{
+				"title": "Stack & Technology",
+				"stack":[
+					{
+						"name": "Rails",
+						"icon": "#",
+						"url": "#",
+						"imageUrl": "#"
+					},
+					{
+						"name": "Ruby",
+						"icon": "#",
+						"url": "#",
+						"imageUrl": "#"
+					},
+					{
+						"name": "Heroku",
+						"icon": "#",
+						"url": "#",
+						"imageUrl": "#"
+					},
+					{
+						"name": "PostgreSQL",
+						"icon": "#",
+						"url": "#",
+						"imageUrl": "#"
+					},
+					{
+						"name": "Twilio",
+						"icon": "#",
+						"url": "#",
+						"imageUrl": "#"
+					},
+					{
+						"name": "HAML",
+						"icon": "#",
+						"url": "#",
+						"imageUrl": "#"
+					},
+					{
+						"name": "SASS",
+						"icon": "#",
+						"url": "#",
+						"imageUrl": "#"
+					},
+					{
+						"name": "jQUery",
+						"icon": "#",
+						"url": "#",
+						"imageUrl": "#"
+					},
+					{
+						"name": "Coffeescript",
+						"icon": "#",
+						"url": "#",
+						"imageUrl": "#"
+					},
+					{
+						"name": "HTML5",
+						"icon": "#",
+						"url": "#",
+						"imageUrl": "#"
+					},
+					{
+						"name": "CSS3",
+						"icon": "#",
+						"url": "#",
+						"imageUrl": "#"
+					}
+				]
+			},
+			{
+				"title": "We have fun!",
+				"intro": "We like do things together outside of work (not just drinking)",
+				"gallery": [
+					{
+						"imageUrl": "assets/img/fun__1.jpg",
+						"url": "#",
+						"name": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam"
+					},
+					{
+						"imageUrl": "assets/img/fun__1.jpg",
+						"url": "#",
+						"name": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam"
+					},
+					{
+						"imageUrl": "assets/img/fun__1.jpg",
+						"url": "#",
+						"name": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam"
+					}
+				]
+			},
+			{
+				"title": "Our favorite benefits",
+				"benefits":[
+					{
+						"title": "Immediate Impact",
+						"description": "From prototyping experimental features to redesigning our backend architecture, everyone on the team has input",
+						"icon": "impact"
+					},
+					{
+						"title": "Your Work Matters",
+						"description": "From prototyping experimental features to redesigning our backend architecture, everyone on the team has input",
+						"icon": "nodes"
+					},
+					{
+						"title": "Amazing People",
+						"description": "We are an international company with fantastic mix of entrepreneurship, technical know-how and leadership",
+						"icon": "people"
+
+					},
+					{
+						"title": "Education",
+						"description": "We are an international company with fantastic mix of entrepreneurship, technical know-how and leadership",
+						"icon": "book"
+					},
+					{
+						"title": "Social Events",
+						"description": "We like to have fun together outside, so whether its going on a company retrat to Ibiza, running a marathon in Nice something going on",
+						"icon": "game"
+					},
+					{
+						"title": "We're Hackers",
+						"description": "We like to have fun together outside, so whether its going on a company retrat to Ibiza, running a marathon in Nice something going on",
+						"icon": "laptop"
+					}
+				]
+			},
+			{
+				"title": "Open Positions",
+				"subtitle": "We operate as one global team. Take your pick between our offices in New York, London and Hong Kong. We also work with remote team members",
+				"locations": [
+					{
+						"country": "London",
+						"positions":[
+							{
+								"role": "Ruby on Rails Developer",
+								"url": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							},
+							{
+								"role": "Web designer",
+								"url": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							},
+							{
+								"role": "DevOps Engineer",
+								"url": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							},
+							{
+								"role": "Support Engineer",
+								"url": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							},
+							{
+								"role": "Front End Developer",
+								"url": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							}
+						]
+					},
+					{
+						"country": "New York",
+						"positions":[
+							{
+								"role": "Ruby on Rails Developer",
+								"link": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							},
+							{
+								"role": "Web designer",
+								"link": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							},
+							{
+								"role": "DevOps Engineer",
+								"link": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							},
+							{
+								"role": "Support Engineer",
+								"link": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							},
+							{
+								"role": "Front End Developer",
+								"link": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							}
+						]
+					},
+					{
+						"country": "Hong Kong",
+						"positions":[
+							{
+								"role": "Ruby on Rails Developer",
+								"link": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							},
+							{
+								"role": "Web designer",
+								"link": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							},
+							{
+								"role": "DevOps Engineer",
+								"link": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							},
+							{
+								"role": "Support Engineer",
+								"link": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							},
+							{
+								"role": "Front End Developer",
+								"link": "#",
+								"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam beatae, recusandae eligendi, omnis odio? Suscipit reiciendis blanditiis aperiam fugiat repudiandae velit et perspiciatis quaerat, sint illum, nemo, magnam totam!"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}
