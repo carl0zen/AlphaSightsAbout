@@ -1,9 +1,9 @@
 <div id="team">
 	<div class="content">
-		<h1>{{global.index.sections[1].title}}</h1>
+		<h1 class="animated" data-animated="flip">{{global.index.sections[1].title}}</h1>
 		<ul class="team">
 		{% for item in global.index.sections[1].team %}
-			<li>
+			<li class="animated" data-animated="pulse">
 				<span class="avatar "><img src="{{item.imageUrl}}" alt="{{item.name}}"></span>
 				<h3>{{item.name}}</h3>
 				<p>{{item.role}}</p>

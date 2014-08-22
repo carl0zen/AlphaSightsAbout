@@ -1,13 +1,13 @@
-<div id="positions">
+<div id="positions" class="animated"  data-animated="fadeInUp">
 	<div class="content">
 		<h1>{{global.index.sections[5].title}}</h1>
 		<p>{{global.index.sections[5].subtitle}}</p>
 		{% for locations in global.index.sections[5].locations %}
-			<div>
+			<div class="animated"  data-animated="bounceInUp">
 				<h3>{{locations.country}}</h3>
 				<ul class="positions">
 				{% for item in locations.positions %}
-					<li><a href="{{item.url}}">{{item.role}}</a></li>
+					<li class="animated"  data-animated="fadeInDown"><a href="{{item.url}}">{{item.role}}</a></li>
 				{% endfor %}
 				</ul>
 			</div>

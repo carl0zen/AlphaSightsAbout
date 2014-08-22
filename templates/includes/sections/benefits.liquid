@@ -1,10 +1,10 @@
-<div id="benefits">
+<div id="benefits" class="animated"  data-animated="fadeInUp" >
 	<div class="content">
 		<h1>{{global.index.sections[4].title}}</h1>
-		<ul class="benefits">
+		<ul class="benefits animated"  data-animated="fadeInUp">
 		{% for item in global.index.sections[4].benefits %}
 			<li>
-				<span class="icon icon-{{item.icon}}"></span>
+				<span class="icon icon-{{item.icon}} animated"  data-animated="fadeInUp"></span>
 				<h3>{{item.title}}</h3>
 				<p>{{item.description}}</p>
 			</li>

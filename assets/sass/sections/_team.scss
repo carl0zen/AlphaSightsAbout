@@ -20,6 +20,9 @@
 	.team{
 		display: inline-block;
 		li{
+			&:first-child{
+				animation-delay:3s;
+			}
 			.avatar{
 				border-radius: 50%;
 				background: #000;

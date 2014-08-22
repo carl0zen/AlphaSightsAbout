@@ -7,10 +7,12 @@
 $(document).ready(function(e){
 	//Animate from top
 	//Animate from top
+var offset;
 $('.animated').waypoint(function() {
 	$(this).toggleClass($(this).data('animated'));
+	
 },
-{ offset: 70 });
+{ offset: $(window).height()-200 });
 	/** 
 	//Animate from bottom
 	$('.animated').waypoint(function() {

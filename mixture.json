@@ -17,7 +17,7 @@
   "projectDescription": "A Simple Mixture blog boilerplate",
   "projectName": "AboutUs",
   "publishedId": null,
-  "remoteDebugPort": 8081,
+  "remoteDebugPort": null,
   "routes": [
     {
       "redirect": null,

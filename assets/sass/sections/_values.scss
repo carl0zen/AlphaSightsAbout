@@ -29,6 +29,11 @@ $values__font-color: #9DB1C0 !default;
 			font-weight:500;
 		}
 		.item{
+			-webkit-animation-duration:3s;
+			-moz-animation-duration:3s;
+			-ms-animation-duration:3s;
+			-o-animation-duration:3s;
+			animation-duration:1s;
 			list-style-type: none;
 			@extend .columns,.large-4;
 			float:left;
@@ -37,6 +42,10 @@ $values__font-color: #9DB1C0 !default;
 			padding: 0 1rem;
 		}
 		.icon {
+			-moz-animation-duration:7s;
+			-ms-animation-duration:7s;
+			-o-animation-duration:7s;
+			animation-duration:7s;
 			font-family: alphasights;
 			font-size: 3rem;
 			padding: 1.7rem;

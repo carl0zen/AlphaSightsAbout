@@ -35,11 +35,13 @@
 				"title": "Our Values",
 				"values": [
 					{
+						"id": "values",
 						"title": "Humble",
 						"description": "We value feedback on our work, whether it is positive or negative feedback",
 						"icon": "a"
 					},
 					{
+						"id": "programming",
 						"title": "Naturally interested in programming",
 						"description": "We would be programming for fun even if it wasn't our job",
 						"icon": "b"
