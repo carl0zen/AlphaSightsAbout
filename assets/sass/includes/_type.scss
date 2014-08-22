@@ -9,6 +9,9 @@ h1,h2,h3,h4{
 	font-weight: 500 ;
 	color: $headingFontColor;
 }
+a{
+	text-decoration: none !important;
+}
 h1{
 	text-align: center;
 	font-size: 36px;

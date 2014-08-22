@@ -3734,6 +3734,11 @@ meta.foundation-mq-topbar {
   font-weight: 500;
 }
 #values .values .item {
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  animation-duration: 1s;
   list-style-type: none;
   float: left;
   text-align: center;
@@ -3741,6 +3746,10 @@ meta.foundation-mq-topbar {
   padding: 0 1rem;
 }
 #values .values .icon {
+  -moz-animation-duration: 7s;
+  -ms-animation-duration: 7s;
+  -o-animation-duration: 7s;
+  animation-duration: 7s;
   font-family: alphasights;
   font-size: 3rem;
   padding: 1.7rem;
@@ -3780,6 +3789,9 @@ meta.foundation-mq-topbar {
   list-style-type: none;
   text-align: center;
   margin: 3rem 0;
+}
+#team .team li:first-child {
+  animation-delay: 3s;
 }
 #team .team li .avatar {
   border-radius: 50%;

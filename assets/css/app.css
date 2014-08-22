@@ -896,6 +896,10 @@ h1, h2, h3, h4 {
   color: #71777b;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 h1 {
   text-align: center;
   font-size: 36px;
@@ -3674,6 +3678,9 @@ meta.foundation-mq-topbar {
   height: 950px;
   color: white;
   -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  -o-animation-duration: 3s;
   animation-duration: 3s;
   animation-delay: 2s;
 }
@@ -3705,6 +3712,24 @@ meta.foundation-mq-topbar {
   display: block;
   width: 90px;
   margin: 15rem auto;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+#main .content .icon-arrowdown:hover:before {
+  text-decoration: none;
+}
+#main .content .icon-arrowdown:before {
+  color: #fefefe;
+  text-decoration: none;
+}
+#main .content .icon-arrowdown:hover {
+  background: white;
+}
+#main .content .icon-arrowdown:hover:before {
+  color: #ff762a;
 }
 
 /*
@@ -3770,7 +3795,7 @@ meta.foundation-mq-topbar {
    ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝
 */
 #team {
-  padding: 6rem 0;
+  padding: 3rem 0;
   background: #2b2b2d url(../img/section__team--bg.png) no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -3848,10 +3873,13 @@ meta.foundation-mq-topbar {
 ╚═╝      ╚═════╝ ╚═╝  ╚═══╝
 */
 #fun {
-  padding: 5rem 0;
+  padding: 3rem 0;
   background: rgba(219, 226, 232, 0.26);
   text-align: center;
   color: #71777b;
+}
+#fun .content {
+  padding-top: 0;
 }
 #fun .orbit-bullets li {
   background: #2f87c3;
@@ -3927,12 +3955,16 @@ meta.foundation-mq-topbar {
   list-style-type: none;
   float: left;
   padding: 10px;
-  padding-left: 13%;
+}
+#benefits li .icon {
+  margin: 0 0.5em 2em 0;
+}
+#benefits li h3 {
+  margin: 0;
 }
 #benefits .icon {
   font-size: 3em;
-  margin-left: -13%;
-  position: absolute;
+  float: left;
   top: 1.3em;
   line-height: 1.5em;
   text-align: center;

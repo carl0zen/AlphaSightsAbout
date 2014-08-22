@@ -13,11 +13,22 @@
 	@include background-size(cover);
 	h1, &, h3{color:$white}
 	ul{display: inline-block;}
-	li{position:relative;list-style-type: none; @extend .medium-6;float:left;padding: 10px; padding-left:13%;}
+	li{
+		position:relative;
+		list-style-type: none; 
+		.icon{
+			margin: 0 0.5em 2em 0;
+		}
+		@extend .medium-6;
+		float:left;padding: 10px;
+		h3{
+			margin: 0;
+		}
+	}
+
 	.icon{
 		font-size: 3em;
-		margin-left: -13%;
-		position: absolute;
+		float:left;
 		top: 1.3em;
 		line-height: 1.5em;
 		text-align: center;

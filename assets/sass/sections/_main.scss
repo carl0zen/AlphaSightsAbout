@@ -12,8 +12,12 @@
 	height:950px;
 	color:white;
 	-webkit-animation-duration:3s;
+	-moz-animation-duration:3s;
+	-ms-animation-duration:3s;
+	-o-animation-duration:3s;
 	animation-duration:3s;
 	animation-delay:2s;
+
 	> div{
 
 	}
@@ -45,6 +49,19 @@
 			display: block;
 			width: 90px;
 			margin: 15rem auto;
+			@include transition(all 0.3s ease);
+			cursor: pointer;
+			&:hover:before{
+				text-decoration: none;
+			}
+			&:before{color:$white;text-decoration: none}
+			&:hover {
+			    background: rgba(255,255,255,1);
+			    &:before{
+			    	color: $orange;
+			    	
+			    }
+			}
 		}
 	}
 }

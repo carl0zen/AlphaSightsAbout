@@ -8,7 +8,7 @@
 	"menu":[
 		{
 			"name": "About Us",
-			"link": "#about"
+			"link": "#main"
 		},
 		{
 			"name": "Our Values",
@@ -17,6 +17,14 @@
 		{
 			"name": "Our Team",
 			"link": "#team"
+		},
+		{
+			"name": "Stack",
+			"link": "#stack"
+		},
+		{
+			"name": "Fun",
+			"link": "#fun"
 		},
 		{
 			"name": "Benefits",
@@ -33,6 +41,7 @@
 		"sections":[
 			{
 				"title": "Our Values",
+				"id":"values",
 				"values": [
 					{
 						"id": "values",
@@ -65,6 +74,7 @@
 			},
 			{
 				"title": "Our Team",
+				"id":"team",
 				"team":[
 					{
 						"name": "Tor Erik Linnerud",
@@ -134,6 +144,7 @@
 			},
 			{
 				"title": "Stack & Technology",
+				"id":"stack",
 				"stack":[
 					{
 						"name": "Rails",
@@ -205,6 +216,7 @@
 			},
 			{
 				"title": "We have fun!",
+				"id":"fun",
 				"intro": "We like do things together outside of work (not just drinking)",
 				"gallery": [
 					{
@@ -226,6 +238,7 @@
 			},
 			{
 				"title": "Our favorite benefits",
+				"id":"benefits",
 				"benefits":[
 					{
 						"title": "Immediate Impact",
@@ -262,6 +275,7 @@
 			},
 			{
 				"title": "Open Positions",
+				"id":"positions",
 				"subtitle": "We operate as one global team. Take your pick between our offices in New York, London and Hong Kong. We also work with remote team members",
 				"locations": [
 					{

@@ -7,10 +7,13 @@
 ╚═╝      ╚═════╝ ╚═╝  ╚═══╝
 */
 #fun{
-	padding: 5rem 0;
+	padding: 3rem 0;
 	background: lighten($gray,20%);
 	text-align: center;
 	color:$headingFontColor;
+	.content{
+		padding-top: 0;
+	}
 	.orbit-bullets li{
 		background: $blue;
 		&.active{
