@@ -1,14 +1,9 @@
 <div id="fun">
-	<div class="content">
-		<h1 class="animated" data-animated="tada">{{global.index.sections[3].title}}</h1>
-		<p class="animated" data-animated="fadeInUp">{{global.index.sections[3].intro}}</p>
-	
-		<ul class="fun animated" data-animated="fadeInUp" data-orbit >
-		{% for item in global.index.sections[3].gallery %}
-			<li class="animated" data-animated="fadeInUp">
-				<a href="{{item.url}}"><img src="{{item.imageUrl}}" alt="{{item.name}}"></a>
-			</li>
-		{% endfor %}
-		</ul>
+	<div class="wrapper">
+		<div class="content">
+			<h1 class="animated" data-animated="tada">{{global.index.sections[3].title}}</h1>
+			<p class="animated" data-animated="fadeInUp">{{global.index.sections[3].intro}}</p>
+		</div>
 	</div>
+	{% include "modules/photostack" %}
 </div>

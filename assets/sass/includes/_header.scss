@@ -1,3 +1,11 @@
+/*
+██╗  ██╗███████╗ █████╗ ██████╗ ███████╗██████╗ 
+██║  ██║██╔════╝██╔══██╗██╔══██╗██╔════╝██╔══██╗
+███████║█████╗  ███████║██║  ██║█████╗  ██████╔╝
+██╔══██║██╔══╝  ██╔══██║██║  ██║██╔══╝  ██╔══██╗
+██║  ██║███████╗██║  ██║██████╔╝███████╗██║  ██║
+╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝
+*/
 header{
 	&.top-bar{
 		background: white;
@@ -7,18 +15,21 @@ header{
 		height:$header__height;
 		line-height: 4em;
 		line-height: $header__height;
-		z-index: 99;
+		z-index: 10001;
 	}
 	.row{
 		max-width:$content__max-width !important;
 		margin:0 auto;
 	}
 	.logo{
-		@extend .small-2 ,.columns;
+		
+		@include grid-column(2);
 	}
 	nav{
 		text-align: right;
-		@extend .small-10 ,.columns;
+		
+		@include grid-column(10);
+
 		li {
 			display: inline-block;
 		}

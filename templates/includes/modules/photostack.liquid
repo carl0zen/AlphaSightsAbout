@@ -1,0 +1,12 @@
+<section id="photostack-1" class="photostack photostack-start">
+    <div>
+        <!-- default Polaroid without backside -->
+        {% for picture in global.index.sections[3].gallery %}
+             <figure>
+                
+                <a href="{{picture.url}}" class="potostack-img"><img src="{{picture.imageUrl}}" alt="{{picture.name}}"></a>
+
+            </figure>
+        {% endfor %}
+    </div>
+</section>

@@ -23,11 +23,15 @@
 		min-height: 45em;
 	}
 	.content > div{
-		@extend .large-4,.columns;
+		//@extend .large-4,.columns;
+		@include grid-column(4);
+
 	}
 	p{
 		text-align: center;
-		@extend .medium-12, .columns, .medium-centered;
+		//@extend .medium-12, .columns, .medium-centered;
+		@include grid-column($columns:12, $center:true);
+
 		font-size: 1.2em;
 		padding: 3% 13%;
 	}

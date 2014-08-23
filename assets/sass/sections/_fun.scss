@@ -7,65 +7,31 @@
 ╚═╝      ╚═════╝ ╚═╝  ╚═══╝
 */
 #fun{
-	padding: 3rem 0;
+	padding: 0;
+	height: 94%;
 	background: lighten($gray,20%);
 	text-align: center;
 	color:$headingFontColor;
-	.content{
+	.wrapper{
 		padding-top: 0;
-	}
-	.orbit-bullets li{
-		background: $blue;
-		&.active{
-			background: darken($blue, 20%);
-		}
-		&:hover{
-			color: lighten($blue, 20%);
+		position: absolute;
+		
+		width:100%;
+		max-width: 100%;
+		.content{
+			position: relative;
+			z-index: 1000;
 		}
 	}
 	.fun{
 		
-		margin:3rem auto 0 0;
+		margin:0rem auto 0 0;
 		img{margin:0 auto}
-
 	}
-	.content{
-		.orbit-prev, .orbit-next{
-			&:hover{
-				background: none;
-				text-decoration:none;
-			}
-			&:hover:before{
-				color: lighten($blue, 13%);
-			}
-			span{display: none;}
-			&:before {
-				position: relative;
-				display: block;
-				top: 0;
-				color: $blue;
-				width: auto;
-				text-indent: 0;
-				font-family: alphasights;
-				font-size: 3em;
-			}
-		}
-		//Left arrow
-		.orbit-prev{
-			
-			&:before {
-				content: '1';
-				
-			}
-		}
-		.orbit-next{
-			span{display: none;}
-			&:before {
-				content: '2';
-				left: -0.5em;
-			}
-
-		}
+	
+	.photostack{
+		height:100%;
+		z-index: 999;
+		
 	}
-
 }

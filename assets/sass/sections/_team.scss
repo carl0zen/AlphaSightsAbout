@@ -33,7 +33,9 @@
 				display: table;
 			}
 			display: inline-block;
-			@extend .columns, .large-3;
+			//@extend .columns, .large-3;
+			@include grid-column(3);
+
 			list-style-type: none;
 			text-align: center;
 			margin: 3rem 0;

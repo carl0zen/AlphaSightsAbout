@@ -14,7 +14,9 @@
 		margin-top: 4rem;
 	}
 	.item{
-		@extend .columns, .medium-2;
+		//@extend .columns, .medium-2;
+		@include grid-column(2);
+
 		border-right:1px solid $gray;
 		border-bottom:1px solid $gray;
 		text-align:center;

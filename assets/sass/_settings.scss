@@ -1,21 +1,25 @@
 /*
- * Settings
+███████╗███████╗████████╗████████╗██╗███╗   ██╗ ██████╗ ███████╗
+██╔════╝██╔════╝╚══██╔══╝╚══██╔══╝██║████╗  ██║██╔════╝ ██╔════╝
+███████╗█████╗     ██║      ██║   ██║██╔██╗ ██║██║  ███╗███████╗
+╚════██║██╔══╝     ██║      ██║   ██║██║╚██╗██║██║   ██║╚════██║
+███████║███████╗   ██║      ██║   ██║██║ ╚████║╚██████╔╝███████║
+╚══════╝╚══════╝   ╚═╝      ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝
  */
 
 
 $base-font-size:			16px!default;
 $base-line-height:		23px!default;
 
-$brand-face:					"Open Sans",sans-serif!default;
-$default-face:				"Lato",sans-serif!default;
+$brand-face:          "Open Sans",sans-serif !default;
+$default-face:        $brand-face;
 
-$bgrnd-color:					#F9F9F9!default;
-$default-font-color:	#333333!default;
+$bgrnd-color:         #F9F9F9!default;
+$default-font-color:  #333333!default;
 
-$base-spacing-unit:		$base-line-height!default;
-$half-spacing-unit:		$base-spacing-unit / 2!default;
-$line-height-ratio:		$base-line-height / $base-font-size;
-
+$base-spacing-unit:   $base-line-height!default;
+$half-spacing-unit:   $base-spacing-unit / 2!default;
+$line-height-ratio:   $base-line-height / $base-font-size;
 
 
 /*
@@ -291,6 +295,5 @@ $footerMenuFontColor: $defaultFontColor;
   $default-transition-duration : 0.2s;
   $default-transition-function : ease;    //[ ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(x1, y1, x2, y2)]
   $default-transition-delay    : false;
-
 
 

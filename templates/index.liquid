@@ -10,19 +10,4 @@
 	{% include "sections/benefits"  %}
 	{% include "sections/positions"  %}
 
-
-{% comment %}
-	<span class="subtitle">{{ model.intro }}</span>
-	{% collection "article" by 2 query 'tags={{ mixture.route.tag }}' order desc %}
-		{% if collection.current_page > collection.pages and collection.size > 0 %}
-			{% include "articles/paged-too-far" %}
-		{% elseif collection.size == 0 %}
-			{% include "articles/no-articles" %}
-		{% else %}
-			{% assign currentpage = collection.current_page %}
-			{% include "articles/article" with collection.items %}
-			{% include "articles/paging" %}
-		{% endif %}
-	{% endcollection %}
-{% endcomment %}
 {% endblock %}

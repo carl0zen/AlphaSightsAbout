@@ -35,7 +35,9 @@ $values__font-color: #9DB1C0 !default;
 			-o-animation-duration:3s;
 			animation-duration:1s;
 			list-style-type: none;
-			@extend .columns,.large-4;
+			//@extend .columns,.large-4;
+			@include grid-column(4);
+
 			float:left;
 			text-align: center;
 			min-height: 18rem;
