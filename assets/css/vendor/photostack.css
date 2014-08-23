@@ -6,7 +6,7 @@
   font-style: normal;
 }
 .photostack {
-  background: #ddd;
+  background: transparent;
   position: relative;
   text-align: center;
   overflow: hidden;
@@ -36,6 +36,7 @@
   background: #fff;
   padding: 1em;
   border-radius: 3px;
+  top: -42%;
 }
 
 .js .photostack figure {
