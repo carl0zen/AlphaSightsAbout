@@ -15,9 +15,15 @@
 	
 		.content{
 			position: relative;
-			
+			padding: 3.2% 0;
 			p{
-				margin: 3em 0
+				margin: 3% 0
+			}
+			h1,p{
+				z-index: 1000;
+				position: relative;
+				text-align: center;
+				width:100%
 			}
 		}
 
@@ -28,7 +34,8 @@
 	}
 	
 	.photostack{
-		height:74%;
+		margin-top: -14.5em;
+		height:96.8%;
 		nav{
 
 		}

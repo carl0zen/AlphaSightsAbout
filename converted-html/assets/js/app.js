@@ -1,3 +1,11 @@
+/*
+ █████╗ ██████╗ ██████╗ 
+██╔══██╗██╔══██╗██╔══██╗
+███████║██████╔╝██████╔╝
+██╔══██║██╔═══╝ ██╔═══╝ 
+██║  ██║██║     ██║     
+╚═╝  ╚═╝╚═╝     ╚═╝
+*/
 /*!
  * jQuery JavaScript Library v1.11.1
  * http://jquery.com/
@@ -10921,479 +10929,464 @@ return jQuery;
 
 }(jQuery, window, window.document));
 
-;(function ($, window, document, undefined) {
-  'use strict';
-
-  var noop = function() {};
-
-  var Orbit = function(el, settings) {
-    // Don't reinitialize plugin
-    if (el.hasClass(settings.slides_container_class)) {
-      return this;
-    }
-
-    var self = this,
-        container,
-        slides_container = el,
-        number_container,
-        bullets_container,
-        timer_container,
-        idx = 0,
-        animate,
-        timer,
-        locked = false,
-        adjust_height_after = false;
-
-
-    self.slides = function() {
-      return slides_container.children(settings.slide_selector);
-    };
-
-    self.slides().first().addClass(settings.active_slide_class);
-
-    self.update_slide_number = function(index) {
-      if (settings.slide_number) {
-        number_container.find('span:first').text(parseInt(index)+1);
-        number_container.find('span:last').text(self.slides().length);
-      }
-      if (settings.bullets) {
-        bullets_container.children().removeClass(settings.bullets_active_class);
-        $(bullets_container.children().get(index)).addClass(settings.bullets_active_class);
-      }
-    };
-
-    self.update_active_link = function(index) {
-      var link = $('[data-orbit-link="'+self.slides().eq(index).attr('data-orbit-slide')+'"]');
-      link.siblings().removeClass(settings.bullets_active_class);
-      link.addClass(settings.bullets_active_class);
-    };
-
-    self.build_markup = function() {
-      slides_container.wrap('<div class="'+settings.container_class+'"></div>');
-      container = slides_container.parent();
-      slides_container.addClass(settings.slides_container_class);
-
-      if (settings.stack_on_small) {
-        container.addClass(settings.stack_on_small_class);
-      }
-
-      if (settings.navigation_arrows) {
-        container.append($('<a href="#"><span></span></a>').addClass(settings.prev_class));
-        container.append($('<a href="#"><span></span></a>').addClass(settings.next_class));
-      }
-
-      if (settings.timer) {
-        timer_container = $('<div>').addClass(settings.timer_container_class);
-        timer_container.append('<span>');
-        timer_container.append($('<div>').addClass(settings.timer_progress_class));
-        timer_container.addClass(settings.timer_paused_class);
-        container.append(timer_container);
-      }
-
-      if (settings.slide_number) {
-        number_container = $('<div>').addClass(settings.slide_number_class);
-        number_container.append('<span></span> ' + settings.slide_number_text + ' <span></span>');
-        container.append(number_container);
-      }
-
-      if (settings.bullets) {
-        bullets_container = $('<ol>').addClass(settings.bullets_container_class);
-        container.append(bullets_container);
-        bullets_container.wrap('<div class="orbit-bullets-container"></div>');
-        self.slides().each(function(idx, el) {
-          var bullet = $('<li>').attr('data-orbit-slide', idx).on('click', self.link_bullet);;
-          bullets_container.append(bullet);
-        });
-      }
-
-    };
-
-    self._goto = function(next_idx, start_timer) {
-      // if (locked) {return false;}
-      if (next_idx === idx) {return false;}
-      if (typeof timer === 'object') {timer.restart();}
-      var slides = self.slides();
-
-      var dir = 'next';
-      locked = true;
-      if (next_idx < idx) {dir = 'prev';}
-      if (next_idx >= slides.length) {
-        if (!settings.circular) return false;
-        next_idx = 0;
-      } else if (next_idx < 0) {
-        if (!settings.circular) return false;
-        next_idx = slides.length - 1;
-      }
-
-      var current = $(slides.get(idx));
-      var next = $(slides.get(next_idx));
-
-      current.css('zIndex', 2);
-      current.removeClass(settings.active_slide_class);
-      next.css('zIndex', 4).addClass(settings.active_slide_class);
-
-      slides_container.trigger('before-slide-change.fndtn.orbit');
-      settings.before_slide_change();
-      self.update_active_link(next_idx);
-
-      var callback = function() {
-        var unlock = function() {
-          idx = next_idx;
-          locked = false;
-          if (start_timer === true) {timer = self.create_timer(); timer.start();}
-          self.update_slide_number(idx);
-          slides_container.trigger('after-slide-change.fndtn.orbit',[{slide_number: idx, total_slides: slides.length}]);
-          settings.after_slide_change(idx, slides.length);
-        };
-        if (slides_container.height() != next.height() && settings.variable_height) {
-          slides_container.animate({'height': next.height()}, 250, 'linear', unlock);
-        } else {
-          unlock();
-        }
-      };
-
-      if (slides.length === 1) {callback(); return false;}
-
-      var start_animation = function() {
-        if (dir === 'next') {animate.next(current, next, callback);}
-        if (dir === 'prev') {animate.prev(current, next, callback);}
-      };
-
-      if (next.height() > slides_container.height() && settings.variable_height) {
-        slides_container.animate({'height': next.height()}, 250, 'linear', start_animation);
-      } else {
-        start_animation();
-      }
-    };
-
-    self.next = function(e) {
-      e.stopImmediatePropagation();
-      e.preventDefault();
-      self._goto(idx + 1);
-    };
-
-    self.prev = function(e) {
-      e.stopImmediatePropagation();
-      e.preventDefault();
-      self._goto(idx - 1);
-    };
-
-    self.link_custom = function(e) {
-      e.preventDefault();
-      var link = $(this).attr('data-orbit-link');
-      if ((typeof link === 'string') && (link = $.trim(link)) != "") {
-        var slide = container.find('[data-orbit-slide='+link+']');
-        if (slide.index() != -1) {self._goto(slide.index());}
-      }
-    };
-
-    self.link_bullet = function(e) {
-      var index = $(this).attr('data-orbit-slide');
-      if ((typeof index === 'string') && (index = $.trim(index)) != "") {
-        if(isNaN(parseInt(index)))
-        {
-          var slide = container.find('[data-orbit-slide='+index+']');
-          if (slide.index() != -1) {self._goto(slide.index() + 1);}
-        }
-        else
-        {
-          self._goto(parseInt(index));
-        }
-      }
-
-    }
-
-    self.timer_callback = function() {
-      self._goto(idx + 1, true);
-    }
-
-    self.compute_dimensions = function() {
-      var current = $(self.slides().get(idx));
-      var h = current.height();
-      if (!settings.variable_height) {
-        self.slides().each(function(){
-          if ($(this).height() > h) { h = $(this).height(); }
-        });
-      }
-      slides_container.height(h);
-    };
-
-    self.create_timer = function() {
-      var t = new Timer(
-        container.find('.'+settings.timer_container_class),
-        settings,
-        self.timer_callback
-      );
-      return t;
-    };
-
-    self.stop_timer = function() {
-      if (typeof timer === 'object') timer.stop();
-    };
-
-    self.toggle_timer = function() {
-      var t = container.find('.'+settings.timer_container_class);
-      if (t.hasClass(settings.timer_paused_class)) {
-        if (typeof timer === 'undefined') {timer = self.create_timer();}
-        timer.start();
-      }
-      else {
-        if (typeof timer === 'object') {timer.stop();}
-      }
-    };
-
-    self.init = function() {
-      self.build_markup();
-      if (settings.timer) {
-        timer = self.create_timer();
-        Foundation.utils.image_loaded(this.slides().children('img'), timer.start);
-      }
-      animate = new FadeAnimation(settings, slides_container);
-      if (settings.animation === 'slide')
-        animate = new SlideAnimation(settings, slides_container);
-
-      container.on('click', '.'+settings.next_class, self.next);
-      container.on('click', '.'+settings.prev_class, self.prev);
-
-      if (settings.next_on_click) {
-        container.on('click', '.'+settings.slides_container_class+' [data-orbit-slide]', self.link_bullet);
-      }
-
-      container.on('click', self.toggle_timer);
-      if (settings.swipe) {
-        container.on('touchstart.fndtn.orbit', function(e) {
-          if (!e.touches) {e = e.originalEvent;}
-          var data = {
-            start_page_x: e.touches[0].pageX,
-            start_page_y: e.touches[0].pageY,
-            start_time: (new Date()).getTime(),
-            delta_x: 0,
-            is_scrolling: undefined
-          };
-          container.data('swipe-transition', data);
-          e.stopPropagation();
-        })
-        .on('touchmove.fndtn.orbit', function(e) {
-          if (!e.touches) { e = e.originalEvent; }
-          // Ignore pinch/zoom events
-          if(e.touches.length > 1 || e.scale && e.scale !== 1) return;
-
-          var data = container.data('swipe-transition');
-          if (typeof data === 'undefined') {data = {};}
-
-          data.delta_x = e.touches[0].pageX - data.start_page_x;
-
-          if ( typeof data.is_scrolling === 'undefined') {
-            data.is_scrolling = !!( data.is_scrolling || Math.abs(data.delta_x) < Math.abs(e.touches[0].pageY - data.start_page_y) );
-          }
-
-          if (!data.is_scrolling && !data.active) {
-            e.preventDefault();
-            var direction = (data.delta_x < 0) ? (idx+1) : (idx-1);
-            data.active = true;
-            self._goto(direction);
-          }
-        })
-        .on('touchend.fndtn.orbit', function(e) {
-          container.data('swipe-transition', {});
-          e.stopPropagation();
-        })
-      }
-      container.on('mouseenter.fndtn.orbit', function(e) {
-        if (settings.timer && settings.pause_on_hover) {
-          self.stop_timer();
-        }
-      })
-      .on('mouseleave.fndtn.orbit', function(e) {
-        if (settings.timer && settings.resume_on_mouseout) {
-          timer.start();
-        }
-      });
-
-      $(document).on('click', '[data-orbit-link]', self.link_custom);
-      $(window).on('load resize', self.compute_dimensions);
-      Foundation.utils.image_loaded(this.slides().children('img'), self.compute_dimensions);
-      Foundation.utils.image_loaded(this.slides().children('img'), function() {
-        container.prev('.'+settings.preloader_class).css('display', 'none');
-        self.update_slide_number(0);
-        self.update_active_link(0);
-        slides_container.trigger('ready.fndtn.orbit');
-      });
-    };
-
-    self.init();
-  };
-
-  var Timer = function(el, settings, callback) {
-    var self = this,
-        duration = settings.timer_speed,
-        progress = el.find('.'+settings.timer_progress_class),
-        start,
-        timeout,
-        left = -1;
-
-    this.update_progress = function(w) {
-      var new_progress = progress.clone();
-      new_progress.attr('style', '');
-      new_progress.css('width', w+'%');
-      progress.replaceWith(new_progress);
-      progress = new_progress;
-    };
-
-    this.restart = function() {
-      clearTimeout(timeout);
-      el.addClass(settings.timer_paused_class);
-      left = -1;
-      self.update_progress(0);
-    };
-
-    this.start = function() {
-      if (!el.hasClass(settings.timer_paused_class)) {return true;}
-      left = (left === -1) ? duration : left;
-      el.removeClass(settings.timer_paused_class);
-      start = new Date().getTime();
-      progress.animate({'width': '100%'}, left, 'linear');
-      timeout = setTimeout(function() {
-        self.restart();
-        callback();
-      }, left);
-      el.trigger('timer-started.fndtn.orbit')
-    };
-
-    this.stop = function() {
-      if (el.hasClass(settings.timer_paused_class)) {return true;}
-      clearTimeout(timeout);
-      el.addClass(settings.timer_paused_class);
-      var end = new Date().getTime();
-      left = left - (end - start);
-      var w = 100 - ((left / duration) * 100);
-      self.update_progress(w);
-      el.trigger('timer-stopped.fndtn.orbit');
-    };
-  };
-
-  var SlideAnimation = function(settings, container) {
-    var duration = settings.animation_speed;
-    var is_rtl = ($('html[dir=rtl]').length === 1);
-    var margin = is_rtl ? 'marginRight' : 'marginLeft';
-    var animMargin = {};
-    animMargin[margin] = '0%';
-
-    this.next = function(current, next, callback) {
-      current.animate({marginLeft:'-100%'}, duration);
-      next.animate(animMargin, duration, function() {
-        current.css(margin, '100%');
-        callback();
-      });
-    };
-
-    this.prev = function(current, prev, callback) {
-      current.animate({marginLeft:'100%'}, duration);
-      prev.css(margin, '-100%');
-      prev.animate(animMargin, duration, function() {
-        current.css(margin, '100%');
-        callback();
-      });
-    };
-  };
-
-  var FadeAnimation = function(settings, container) {
-    var duration = settings.animation_speed;
-    var is_rtl = ($('html[dir=rtl]').length === 1);
-    var margin = is_rtl ? 'marginRight' : 'marginLeft';
-
-    this.next = function(current, next, callback) {
-      next.css({'margin':'0%', 'opacity':'0.01'});
-      next.animate({'opacity':'1'}, duration, 'linear', function() {
-        current.css('margin', '100%');
-        callback();
-      });
-    };
-
-    this.prev = function(current, prev, callback) {
-      prev.css({'margin':'0%', 'opacity':'0.01'});
-      prev.animate({'opacity':'1'}, duration, 'linear', function() {
-        current.css('margin', '100%');
-        callback();
-      });
-    };
-  };
-
-
-  Foundation.libs = Foundation.libs || {};
-
-  Foundation.libs.orbit = {
-    name: 'orbit',
-
-    version: '{{ VERSION }}',
-
-    settings: {
-      animation: 'slide',
-      timer_speed: 10000,
-      pause_on_hover: true,
-      resume_on_mouseout: false,
-      next_on_click: true,
-      animation_speed: 500,
-      stack_on_small: false,
-      navigation_arrows: true,
-      slide_number: true,
-      slide_number_text: 'of',
-      container_class: 'orbit-container',
-      stack_on_small_class: 'orbit-stack-on-small',
-      next_class: 'orbit-next',
-      prev_class: 'orbit-prev',
-      timer_container_class: 'orbit-timer',
-      timer_paused_class: 'paused',
-      timer_progress_class: 'orbit-progress',
-      slides_container_class: 'orbit-slides-container',
-      preloader_class: 'preloader',
-      slide_selector: '*',
-      bullets_container_class: 'orbit-bullets',
-      bullets_active_class: 'active',
-      slide_number_class: 'orbit-slide-number',
-      caption_class: 'orbit-caption',
-      active_slide_class: 'active',
-      orbit_transition_class: 'orbit-transitioning',
-      bullets: true,
-      circular: true,
-      timer: true,
-      variable_height: false,
-      swipe: true,
-      before_slide_change: noop,
-      after_slide_change: noop
-    },
-
-    init : function (scope, method, options) {
-      var self = this;
-      this.bindings(method, options);
-    },
-
-    events : function (instance) {
-      var orbit_instance = new Orbit(this.S(instance), this.S(instance).data('orbit-init'));
-      this.S(instance).data(this.name + '-instance', orbit_instance);
-    },
-
-    reflow : function () {
-      var self = this;
-
-      if (self.S(self.scope).is('[data-orbit]')) {
-        var $el = self.S(self.scope);
-        var instance = $el.data(self.name + '-instance');
-        instance.compute_dimensions();
-      } else {
-        self.S('[data-orbit]', self.scope).each(function(idx, el) {
-          var $el = self.S(el);
-          var opts = self.data_options($el);
-          var instance = $el.data(self.name + '-instance');
-          instance.compute_dimensions();
-        });
-      }
-    }
-  };
-
-
-}(jQuery, window, window.document));
-
+/*!
+ * classie - class helper functions
+ * from bonzo https://github.com/ded/bonzo
+ * 
+ * classie.has( elem, 'my-class' ) -> true/false
+ * classie.add( elem, 'my-new-class' )
+ * classie.remove( elem, 'my-unwanted-class' )
+ * classie.toggle( elem, 'my-class' )
+ */
+!function(s){"use strict";function e(s){return new RegExp("(^|\\s+)"+s+"(\\s+|$)")}function n(s,e){var n=a(s,e)?c:t;n(s,e)}var a,t,c;"classList"in document.documentElement?(a=function(s,e){return s.classList.contains(e)},t=function(s,e){s.classList.add(e)},c=function(s,e){s.classList.remove(e)}):(a=function(s,n){return e(n).test(s.className)},t=function(s,e){a(s,e)||(s.className=s.className+" "+e)},c=function(s,n){s.className=s.className.replace(e(n)," ")});var i={hasClass:a,addClass:t,removeClass:c,toggleClass:n,has:a,add:t,remove:c,toggle:n};"function"==typeof define&&define.amd?define(i):s.classie=i}(window);
+
+/**
+ * photostack.js v1.0.0
+ * http://www.codrops.com
+ *
+ * Licensed under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * Copyright 2014, Codrops
+ * http://www.codrops.com
+ */
+;( function( window ) {
+
+	'use strict';
+
+	// https://gist.github.com/edankwan/4389601
+	Modernizr.addTest('csstransformspreserve3d', function () {
+		var prop = Modernizr.prefixed('transformStyle');
+		var val = 'preserve-3d';
+		var computedStyle;
+		if(!prop) return false;
+
+		prop = prop.replace(/([A-Z])/g, function(str,m1){ return '-' + m1.toLowerCase(); }).replace(/^ms-/,'-ms-');
+
+		Modernizr.testStyles('#modernizr{' + prop + ':' + val + ';}', function (el, rule) {
+			computedStyle = window.getComputedStyle ? getComputedStyle(el, null).getPropertyValue(prop) : '';
+		});
+
+		return (computedStyle === val);
+	});
+
+	var support = { 
+			transitions : Modernizr.csstransitions,
+			preserve3d : Modernizr.csstransformspreserve3d
+		},
+		transEndEventNames = {
+			'WebkitTransition': 'webkitTransitionEnd',
+			'MozTransition': 'transitionend',
+			'OTransition': 'oTransitionEnd',
+			'msTransition': 'MSTransitionEnd',
+			'transition': 'transitionend'
+		},
+		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ];
+
+	function extend( a, b ) {
+		for( var key in b ) { 
+			if( b.hasOwnProperty( key ) ) {
+				a[key] = b[key];
+			}
+		}
+		return a;
+	}
+
+	function shuffleMArray( marray ) {
+		var arr = [], marrlen = marray.length, inArrLen = marray[0].length;
+		for(var i = 0; i < marrlen; i++) {
+			arr = arr.concat( marray[i] );
+		}
+		// shuffle 2 d array
+		arr = shuffleArr( arr );
+		// to 2d
+		var newmarr = [], pos = 0;
+		for( var j = 0; j < marrlen; j++ ) {
+			var tmparr = [];
+			for( var k = 0; k < inArrLen; k++ ) {
+				tmparr.push( arr[ pos ] );
+				pos++;
+			}
+			newmarr.push( tmparr );
+		}
+		return newmarr;
+	}
+
+	function shuffleArr( array ) {
+		var m = array.length, t, i;
+		// While there remain elements to shuffle…
+		while (m) {
+			// Pick a remaining element…
+			i = Math.floor(Math.random() * m--);
+			// And swap it with the current element.
+			t = array[m];
+			array[m] = array[i];
+			array[i] = t;
+		}
+		return array;
+	}
+
+	function Photostack( el, options ) {
+		this.el = el;
+		this.inner = this.el.querySelector( 'div' );
+		this.allItems = [].slice.call( this.inner.children );
+		this.allItemsCount = this.allItems.length;
+		if( !this.allItemsCount ) return;
+		this.items = [].slice.call( this.inner.querySelectorAll( 'figure:not([data-dummy])' ) );
+		this.itemsCount = this.items.length;
+		// index of the current photo
+		this.current = 0;
+		this.options = extend( {}, this.options );
+  		extend( this.options, options );
+  		this._init();
+	}
+
+	Photostack.prototype.options = {};
+
+	Photostack.prototype._init = function() {
+		this.currentItem = this.items[ this.current ];
+		this._addNavigation();
+		this._getSizes();
+		this._initEvents();
+	}
+
+	Photostack.prototype._addNavigation = function() {
+		// add nav dots
+		this.nav = document.createElement( 'nav' )
+		var inner = '';
+		for( var i = 0; i < this.itemsCount; ++i ) {
+			inner += '<span></span>';
+		}
+		this.nav.innerHTML = inner;
+		this.el.appendChild( this.nav );
+		this.navDots = [].slice.call( this.nav.children );
+	}
+
+	Photostack.prototype._initEvents = function() {
+		var self = this,
+			beforeStep = classie.hasClass( this.el, 'photostack-start' ),
+			open = function() {
+				var setTransition = function() { 
+					if( support.transitions ) {
+						classie.addClass( self.el, 'photostack-transition' ); 
+					}
+				}
+				if( beforeStep ) {
+					this.removeEventListener( 'click', open ); 
+					classie.removeClass( self.el, 'photostack-start' );
+					setTransition();
+				}
+				else {
+					self.openDefault = true;
+					setTimeout( setTransition, 25 );
+				}
+				self.started = true; 
+				self._showPhoto( self.current );
+			};
+
+		if( beforeStep ) {
+			this._shuffle();
+			this.el.addEventListener( 'click', open );
+		}
+		else {
+			open();
+		}
+
+		this.navDots.forEach( function( dot, idx ) {
+			dot.addEventListener( 'click', function() {
+				// rotate the photo if clicking on the current dot
+				if( idx === self.current ) {
+					self._rotateItem();
+				}
+				else {
+					// if the photo is flipped then rotate it back before shuffling again
+					var callback = function() { self._showPhoto( idx ); }
+					if( self.flipped ) {
+						self._rotateItem( callback );
+					}
+					else {
+						callback();
+					}
+				}
+			} );
+		} );
+
+		window.addEventListener( 'resize', function() { self._resizeHandler(); } );
+	}
+
+	Photostack.prototype._resizeHandler = function() {
+		var self = this;
+		function delayed() {
+			self._resize();
+			self._resizeTimeout = null;
+		}
+		if ( this._resizeTimeout ) {
+			clearTimeout( this._resizeTimeout );
+		}
+		this._resizeTimeout = setTimeout( delayed, 100 );
+	}
+
+	Photostack.prototype._resize = function() {
+		var self = this, callback = function() { self._shuffle( true ); }
+		this._getSizes();
+		if( this.started && this.flipped ) {
+			this._rotateItem( callback );
+		}
+		else {
+			callback();
+		}
+	}
+
+	Photostack.prototype._showPhoto = function( pos ) {
+		if( this.isShuffling ) {
+			return false;
+		}
+		this.isShuffling = true;
+
+		// if there is something behind..
+		if( classie.hasClass( this.currentItem, 'photostack-flip' ) ) {
+			this._removeItemPerspective();
+			classie.removeClass( this.navDots[ this.current ], 'flippable' );
+		}
+
+		classie.removeClass( this.navDots[ this.current ], 'current' );
+		classie.removeClass( this.currentItem, 'photostack-current' );
+		
+		// change current
+		this.current = pos;
+		this.currentItem = this.items[ this.current ];
+		
+		classie.addClass( this.navDots[ this.current ], 'current' );
+		// if there is something behind..
+		if( this.currentItem.querySelector( '.photostack-back' ) ) {
+			// nav dot gets class flippable
+			classie.addClass( this.navDots[ pos ], 'flippable' );
+		}
+
+		// shuffle a bit
+		this._shuffle();
+	}
+
+	// display items (randomly)
+	Photostack.prototype._shuffle = function( resize ) {
+		var iter = resize ? 1 : this.currentItem.getAttribute( 'data-shuffle-iteration' ) || 1;
+		if( iter <= 0 || !this.started || this.openDefault ) { iter = 1; }
+		// first item is open by default
+		if( this.openDefault ) {
+			// change transform-origin
+			classie.addClass( this.currentItem, 'photostack-flip' );
+			this.openDefault = false;
+			this.isShuffling = false;
+		}
+		
+		var overlapFactor = .5,
+			// lines & columns
+			lines = Math.ceil(this.sizes.inner.width / (this.sizes.item.width * overlapFactor) ),
+			columns = Math.ceil(this.sizes.inner.height / (this.sizes.item.height * overlapFactor) ),
+			// since we are rounding up the previous calcs we need to know how much more we are adding to the calcs for both x and y axis
+			addX = lines * this.sizes.item.width * overlapFactor + this.sizes.item.width/2 - this.sizes.inner.width,
+			addY = columns * this.sizes.item.height * overlapFactor + this.sizes.item.height/2 - this.sizes.inner.height,
+			// we will want to center the grid
+			extraX = addX / 2,
+			extraY = addY / 2,
+			// max and min rotation angles
+			maxrot = 35, minrot = -35,
+			self = this,
+			// translate/rotate items
+			moveItems = function() {
+				--iter;
+				// create a "grid" of possible positions
+				var grid = [];
+				// populate the positions grid
+				for( var i = 0; i < columns; ++i ) {
+					var col = grid[ i ] = [];
+					for( var j = 0; j < lines; ++j ) {
+						var xVal = j * (self.sizes.item.width * overlapFactor) - extraX,
+							yVal = i * (self.sizes.item.height * overlapFactor) - extraY,
+							olx = 0, oly = 0;
+
+						if( self.started && iter === 0 ) {
+							var ol = self._isOverlapping( { x : xVal, y : yVal } );
+							if( ol.overlapping ) {
+								olx = ol.noOverlap.x;
+								oly = ol.noOverlap.y;
+								var r = Math.floor( Math.random() * 3 );
+								switch(r) {
+									case 0 : olx = 0; break;
+									case 1 : oly = 0; break;
+								}
+							}
+						}
+
+						col[ j ] = { x : xVal + olx, y : yVal + oly };
+					}
+				}
+				// shuffle
+				grid = shuffleMArray(grid);
+
+				var l = 0, c = 0, cntItemsAnim = 0;
+				self.allItems.forEach( function( item, i ) {
+					// pick a random item from the grid
+					if( l === lines - 1 ) {
+						c = c === columns - 1 ? 0 : c + 1;
+						l = 1;
+					}
+					else {
+						++l
+					}
+
+					var randXPos = Math.floor( Math.random() * lines ),
+						randYPos = Math.floor( Math.random() * columns ),
+						gridVal = grid[c][l-1],
+						translation = { x : gridVal.x, y : gridVal.y },
+						onEndTransitionFn = function() {
+							++cntItemsAnim;
+							if( support.transitions ) {
+								this.removeEventListener( transEndEventName, onEndTransitionFn );
+							}
+							if( cntItemsAnim === self.allItemsCount ) {
+								if( iter > 0 ) {
+									moveItems.call();
+								}
+								else {
+									// change transform-origin
+									classie.addClass( self.currentItem, 'photostack-flip' );
+									// all done..
+									self.isShuffling = false;
+									if( typeof self.options.callback === 'function' ) {
+										self.options.callback( self.currentItem );
+									}
+								}
+							}
+						};
+
+					if(self.items.indexOf(item) === self.current && self.started && iter === 0) {
+						self.currentItem.style.WebkitTransform = 'translate(' + self.centerItem.x + 'px,' + self.centerItem.y + 'px) rotate(0deg)';
+						self.currentItem.style.msTransform = 'translate(' + self.centerItem.x + 'px,' + self.centerItem.y + 'px) rotate(0deg)';
+						self.currentItem.style.transform = 'translate(' + self.centerItem.x + 'px,' + self.centerItem.y + 'px) rotate(0deg)';
+						// if there is something behind..
+						if( self.currentItem.querySelector( '.photostack-back' ) ) {
+							self._addItemPerspective();
+						}
+						classie.addClass( self.currentItem, 'photostack-current' );
+					}
+					else {
+						item.style.WebkitTransform = 'translate(' + translation.x + 'px,' + translation.y + 'px) rotate(' + Math.floor( Math.random() * (maxrot - minrot + 1) + minrot ) + 'deg)';
+						item.style.msTransform = 'translate(' + translation.x + 'px,' + translation.y + 'px) rotate(' + Math.floor( Math.random() * (maxrot - minrot + 1) + minrot ) + 'deg)';
+						item.style.transform = 'translate(' + translation.x + 'px,' + translation.y + 'px) rotate(' + Math.floor( Math.random() * (maxrot - minrot + 1) + minrot ) + 'deg)';
+					}
+
+					if( self.started ) {
+						if( support.transitions ) {
+							item.addEventListener( transEndEventName, onEndTransitionFn );
+						}
+						else {
+							onEndTransitionFn();
+						}
+					}
+				} );
+			};
+
+		moveItems.call();
+	}
+
+	Photostack.prototype._getSizes = function() {
+		this.sizes = {
+			inner : { width : this.inner.offsetWidth, height : this.inner.offsetHeight },
+			item : { width : this.currentItem.offsetWidth, height : this.currentItem.offsetHeight }
+		};
+		
+		// translation values to center an item
+		this.centerItem = { x : this.sizes.inner.width / 2 - this.sizes.item.width / 2, y : this.sizes.inner.height / 2 - this.sizes.item.height / 2 };
+	}
+
+	Photostack.prototype._isOverlapping = function( itemVal ) {
+		var dxArea = this.sizes.item.width + this.sizes.item.width / 3, // adding some extra avoids any rotated item to touch the central area
+			dyArea = this.sizes.item.height + this.sizes.item.height / 3,
+			areaVal = { x : this.sizes.inner.width / 2 - dxArea / 2, y : this.sizes.inner.height / 2 - dyArea / 2 },
+			dxItem = this.sizes.item.width,
+			dyItem = this.sizes.item.height;
+
+		if( !(( itemVal.x + dxItem ) < areaVal.x ||
+			itemVal.x > ( areaVal.x + dxArea ) ||
+			( itemVal.y + dyItem ) < areaVal.y ||
+			itemVal.y > ( areaVal.y + dyArea )) ) {
+				// how much to move so it does not overlap?
+				// move left / or move right
+				var left = Math.random() < 0.5,
+					randExtraX = Math.floor( Math.random() * (dxItem/4 + 1) ),
+					randExtraY = Math.floor( Math.random() * (dyItem/4 + 1) ),
+					noOverlapX = left ? (itemVal.x - areaVal.x + dxItem) * -1 - randExtraX : (areaVal.x + dxArea) - (itemVal.x + dxItem) + dxItem + randExtraX,
+					noOverlapY = left ? (itemVal.y - areaVal.y + dyItem) * -1 - randExtraY : (areaVal.y + dyArea) - (itemVal.y + dyItem) + dyItem + randExtraY;
+
+				return {
+					overlapping : true,
+					noOverlap : { x : noOverlapX, y : noOverlapY }
+				}
+		}
+		return {
+			overlapping : false
+		}
+	}
+
+	Photostack.prototype._addItemPerspective = function() {
+		classie.addClass( this.el, 'photostack-perspective' );
+	}
+
+	Photostack.prototype._removeItemPerspective = function() {
+		classie.removeClass( this.el, 'photostack-perspective' );
+		classie.removeClass( this.currentItem, 'photostack-flip' );
+	}
+
+	Photostack.prototype._rotateItem = function( callback ) {
+		if( classie.hasClass( this.el, 'photostack-perspective' ) && !this.isRotating && !this.isShuffling ) {
+			this.isRotating = true;
+
+			var self = this, onEndTransitionFn = function() {
+					if( support.transitions && support.preserve3d ) {
+						this.removeEventListener( transEndEventName, onEndTransitionFn );
+					}
+					self.isRotating = false;
+					if( typeof callback === 'function' ) {
+						callback();
+					}
+				};
+
+			if( this.flipped ) {
+				classie.removeClass( this.navDots[ this.current ], 'flip' );
+				if( support.preserve3d ) {
+					this.currentItem.style.WebkitTransform = 'translate(' + this.centerItem.x + 'px,' + this.centerItem.y + 'px) rotateY(0deg)';
+					this.currentItem.style.transform = 'translate(' + this.centerItem.x + 'px,' + this.centerItem.y + 'px) rotateY(0deg)';
+				}
+				else {
+					classie.removeClass( this.currentItem, 'photostack-showback' );
+				}
+			}
+			else {
+				classie.addClass( this.navDots[ this.current ], 'flip' );
+				if( support.preserve3d ) {
+					this.currentItem.style.WebkitTransform = 'translate(' + this.centerItem.x + 'px,' + this.centerItem.y + 'px) translate(' + this.sizes.item.width + 'px) rotateY(-179.9deg)';
+					this.currentItem.style.transform = 'translate(' + this.centerItem.x + 'px,' + this.centerItem.y + 'px) translate(' + this.sizes.item.width + 'px) rotateY(-179.9deg)';
+				}
+				else {
+					classie.addClass( this.currentItem, 'photostack-showback' );
+				}
+			}
+
+			this.flipped = !this.flipped;
+			if( support.transitions && support.preserve3d ) {
+				this.currentItem.addEventListener( transEndEventName, onEndTransitionFn );
+			}
+			else {
+				onEndTransitionFn();
+			}
+		}
+	}
+
+	// add to global namespace
+	window.Photostack = Photostack;
+
+})( window );
 // Generated by CoffeeScript 1.6.2
 /*
 jQuery Waypoints - v2.0.4
@@ -11403,15 +11396,21 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
 */
 (function(){var t=[].indexOf||function(t){for(var e=0,n=this.length;e<n;e++){if(e in this&&this[e]===t)return e}return-1},e=[].slice;(function(t,e){if(typeof define==="function"&&define.amd){return define("waypoints",["jquery"],function(n){return e(n,t)})}else{return e(t.jQuery,t)}})(this,function(n,r){var i,o,l,s,f,u,c,a,h,d,p,y,v,w,g,m;i=n(r);a=t.call(r,"ontouchstart")>=0;s={horizontal:{},vertical:{}};f=1;c={};u="waypoints-context-id";p="resize.waypoints";y="scroll.waypoints";v=1;w="waypoints-waypoint-ids";g="waypoint";m="waypoints";o=function(){function t(t){var e=this;this.$element=t;this.element=t[0];this.didResize=false;this.didScroll=false;this.id="context"+f++;this.oldScroll={x:t.scrollLeft(),y:t.scrollTop()};this.waypoints={horizontal:{},vertical:{}};this.element[u]=this.id;c[this.id]=this;t.bind(y,function(){var t;if(!(e.didScroll||a)){e.didScroll=true;t=function(){e.doScroll();return e.didScroll=false};return r.setTimeout(t,n[m].settings.scrollThrottle)}});t.bind(p,function(){var t;if(!e.didResize){e.didResize=true;t=function(){n[m]("refresh");return e.didResize=false};return r.setTimeout(t,n[m].settings.resizeThrottle)}})}t.prototype.doScroll=function(){var t,e=this;t={horizontal:{newScroll:this.$element.scrollLeft(),oldScroll:this.oldScroll.x,forward:"right",backward:"left"},vertical:{newScroll:this.$element.scrollTop(),oldScroll:this.oldScroll.y,forward:"down",backward:"up"}};if(a&&(!t.vertical.oldScroll||!t.vertical.newScroll)){n[m]("refresh")}n.each(t,function(t,r){var i,o,l;l=[];o=r.newScroll>r.oldScroll;i=o?r.forward:r.backward;n.each(e.waypoints[t],function(t,e){var n,i;if(r.oldScroll<(n=e.offset)&&n<=r.newScroll){return l.push(e)}else if(r.newScroll<(i=e.offset)&&i<=r.oldScroll){return l.push(e)}});l.sort(function(t,e){return t.offset-e.offset});if(!o){l.reverse()}return n.each(l,function(t,e){if(e.options.continuous||t===l.length-1){return e.trigger([i])}})});return this.oldScroll={x:t.horizontal.newScroll,y:t.vertical.newScroll}};t.prototype.refresh=function(){var t,e,r,i=this;r=n.isWindow(this.element);e=this.$element.offset();this.doScroll();t={horizontal:{contextOffset:r?0:e.left,contextScroll:r?0:this.oldScroll.x,contextDimension:this.$element.width(),oldScroll:this.oldScroll.x,forward:"right",backward:"left",offsetProp:"left"},vertical:{contextOffset:r?0:e.top,contextScroll:r?0:this.oldScroll.y,contextDimension:r?n[m]("viewportHeight"):this.$element.height(),oldScroll:this.oldScroll.y,forward:"down",backward:"up",offsetProp:"top"}};return n.each(t,function(t,e){return n.each(i.waypoints[t],function(t,r){var i,o,l,s,f;i=r.options.offset;l=r.offset;o=n.isWindow(r.element)?0:r.$element.offset()[e.offsetProp];if(n.isFunction(i)){i=i.apply(r.element)}else if(typeof i==="string"){i=parseFloat(i);if(r.options.offset.indexOf("%")>-1){i=Math.ceil(e.contextDimension*i/100)}}r.offset=o-e.contextOffset+e.contextScroll-i;if(r.options.onlyOnScroll&&l!=null||!r.enabled){return}if(l!==null&&l<(s=e.oldScroll)&&s<=r.offset){return r.trigger([e.backward])}else if(l!==null&&l>(f=e.oldScroll)&&f>=r.offset){return r.trigger([e.forward])}else if(l===null&&e.oldScroll>=r.offset){return r.trigger([e.forward])}})})};t.prototype.checkEmpty=function(){if(n.isEmptyObject(this.waypoints.horizontal)&&n.isEmptyObject(this.waypoints.vertical)){this.$element.unbind([p,y].join(" "));return delete c[this.id]}};return t}();l=function(){function t(t,e,r){var i,o;r=n.extend({},n.fn[g].defaults,r);if(r.offset==="bottom-in-view"){r.offset=function(){var t;t=n[m]("viewportHeight");if(!n.isWindow(e.element)){t=e.$element.height()}return t-n(this).outerHeight()}}this.$element=t;this.element=t[0];this.axis=r.horizontal?"horizontal":"vertical";this.callback=r.handler;this.context=e;this.enabled=r.enabled;this.id="waypoints"+v++;this.offset=null;this.options=r;e.waypoints[this.axis][this.id]=this;s[this.axis][this.id]=this;i=(o=this.element[w])!=null?o:[];i.push(this.id);this.element[w]=i}t.prototype.trigger=function(t){if(!this.enabled){return}if(this.callback!=null){this.callback.apply(this.element,t)}if(this.options.triggerOnce){return this.destroy()}};t.prototype.disable=function(){return this.enabled=false};t.prototype.enable=function(){this.context.refresh();return this.enabled=true};t.prototype.destroy=function(){delete s[this.axis][this.id];delete this.context.waypoints[this.axis][this.id];return this.context.checkEmpty()};t.getWaypointsByElement=function(t){var e,r;r=t[w];if(!r){return[]}e=n.extend({},s.horizontal,s.vertical);return n.map(r,function(t){return e[t]})};return t}();d={init:function(t,e){var r;if(e==null){e={}}if((r=e.handler)==null){e.handler=t}this.each(function(){var t,r,i,s;t=n(this);i=(s=e.context)!=null?s:n.fn[g].defaults.context;if(!n.isWindow(i)){i=t.closest(i)}i=n(i);r=c[i[0][u]];if(!r){r=new o(i)}return new l(t,r,e)});n[m]("refresh");return this},disable:function(){return d._invoke.call(this,"disable")},enable:function(){return d._invoke.call(this,"enable")},destroy:function(){return d._invoke.call(this,"destroy")},prev:function(t,e){return d._traverse.call(this,t,e,function(t,e,n){if(e>0){return t.push(n[e-1])}})},next:function(t,e){return d._traverse.call(this,t,e,function(t,e,n){if(e<n.length-1){return t.push(n[e+1])}})},_traverse:function(t,e,i){var o,l;if(t==null){t="vertical"}if(e==null){e=r}l=h.aggregate(e);o=[];this.each(function(){var e;e=n.inArray(this,l[t]);return i(o,e,l[t])});return this.pushStack(o)},_invoke:function(t){this.each(function(){var e;e=l.getWaypointsByElement(this);return n.each(e,function(e,n){n[t]();return true})});return this}};n.fn[g]=function(){var t,r;r=arguments[0],t=2<=arguments.length?e.call(arguments,1):[];if(d[r]){return d[r].apply(this,t)}else if(n.isFunction(r)){return d.init.apply(this,arguments)}else if(n.isPlainObject(r)){return d.init.apply(this,[null,r])}else if(!r){return n.error("jQuery Waypoints needs a callback function or handler option.")}else{return n.error("The "+r+" method does not exist in jQuery Waypoints.")}};n.fn[g].defaults={context:r,continuous:true,enabled:true,horizontal:false,offset:0,triggerOnce:false};h={refresh:function(){return n.each(c,function(t,e){return e.refresh()})},viewportHeight:function(){var t;return(t=r.innerHeight)!=null?t:i.height()},aggregate:function(t){var e,r,i;e=s;if(t){e=(i=c[n(t)[0][u]])!=null?i.waypoints:void 0}if(!e){return[]}r={horizontal:[],vertical:[]};n.each(r,function(t,i){n.each(e[t],function(t,e){return i.push(e)});i.sort(function(t,e){return t.offset-e.offset});r[t]=n.map(i,function(t){return t.element});return r[t]=n.unique(r[t])});return r},above:function(t){if(t==null){t=r}return h._filter(t,"vertical",function(t,e){return e.offset<=t.oldScroll.y})},below:function(t){if(t==null){t=r}return h._filter(t,"vertical",function(t,e){return e.offset>t.oldScroll.y})},left:function(t){if(t==null){t=r}return h._filter(t,"horizontal",function(t,e){return e.offset<=t.oldScroll.x})},right:function(t){if(t==null){t=r}return h._filter(t,"horizontal",function(t,e){return e.offset>t.oldScroll.x})},enable:function(){return h._invoke("enable")},disable:function(){return h._invoke("disable")},destroy:function(){return h._invoke("destroy")},extendFn:function(t,e){return d[t]=e},_invoke:function(t){var e;e=n.extend({},s.vertical,s.horizontal);return n.each(e,function(e,n){n[t]();return true})},_filter:function(t,e,r){var i,o;i=c[n(t)[0][u]];if(!i){return[]}o=[];n.each(i.waypoints[e],function(t,e){if(r(i,e)){return o.push(e)}});o.sort(function(t,e){return t.offset-e.offset});return n.map(o,function(t){return t.element})}};n[m]=function(){var t,n;n=arguments[0],t=2<=arguments.length?e.call(arguments,1):[];if(h[n]){return h[n].apply(null,t)}else{return h.aggregate.call(null,n)}};n[m].settings={resizeThrottle:100,scrollThrottle:30};return i.load(function(){return n[m]("refresh")})})}).call(this);
 
-$(document).ready(function(e){
+new Photostack( document.getElementById( 'photostack-1' ), {
+  callback : function( item ) {
+    //console.log(item)
+  }
+} );
 
+$(document).ready(function(e){
+  $(document).foundation();
 	var offset;
 	$('.animated').waypoint(function() {
 		$(this).toggleClass($(this).data('animated'));
 		
 	},
 	{ offset: $(window).height()-200 });
-	$(document).foundation();
+	
 	//Adding click to scroll functionality
 	$(".scroll").click(function(event){
          event.preventDefault();
