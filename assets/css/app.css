@@ -6895,7 +6895,7 @@ nav a {
   background-origin: border-box;
 }
 
-a, a:before {
+a, a:before, .transition-all, #team .team .item *, #team .team .item:hover {
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
@@ -7056,10 +7056,20 @@ a, a:before {
 #team h1 {
   color: #fff;
 }
+#team .info {
+  width: 260%;
+  height: 150%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background: rgba(0, 0, 0, 0.3);
+  margin-left: 100%;
+  display: none;
+}
 #team .team {
   display: inline-block;
 }
-#team .team li {
+#team .team .item {
   display: inline-block;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
@@ -7069,10 +7079,25 @@ a, a:before {
   text-align: center;
   margin: 3rem 0;
 }
-#team .team li:first-child {
+#team .team .item:first-child {
   animation-delay: 3s;
 }
-#team .team li .avatar {
+#team .team .item:hover {
+  cursor: pointer;
+}
+#team .team .item:hover .avatar {
+  -moz-transform: scale(1.13);
+  -ms-transform: scale(1.13);
+  -webkit-transform: scale(1.13);
+  transform: scale(1.13);
+}
+#team .team .item:hover h3, #team .team .item:hover p {
+  -moz-transform: scale(1.17);
+  -ms-transform: scale(1.17);
+  -webkit-transform: scale(1.17);
+  transform: scale(1.17);
+}
+#team .team .item .avatar {
   border-radius: 50%;
   background: #000;
   width: 15rem;
@@ -7081,13 +7106,36 @@ a, a:before {
   overflow: hidden;
   display: table;
 }
-#team .team li h3 {
+#team .team .item h3 {
   color: #e0e0e0;
 }
-#team .team li p {
+#team .team .item p {
   text-transform: uppercase;
   font-size: 0.8rem;
   color: #7e7e7f;
+}
+
+.centerBlockFixed {
+  position: fixed;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0px !important;
+  left: 0px !important;
+  padding: 5% 0;
+  background: rgba(255, 118, 42, 0.99);
+  z-index: 9999;
+}
+.centerBlockFixed .close {
+  font-family: 'alphasights';
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  color: #333;
+  display: block;
+  font-size: 2em;
+}
+.centerBlockFixed p {
+  color: #e75200;
 }
 
 /*

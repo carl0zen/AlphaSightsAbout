@@ -16,11 +16,34 @@
 	h1{
 		color: #fff;
 	}
+	.info{
+		width: 260%;
+		height: 150%;
+		position: absolute;
+		top: 0;
+		left: -100%;
+		background: rgba(0,0,0,.3);
+		margin-left: 100%;
+		display: none;
+	}
 	.team{
 		display: inline-block;
-		li{
+		.item{
 			&:first-child{
 				animation-delay:3s;
+			}
+			&:hover{
+				cursor: pointer;
+				
+			}
+			&:hover .avatar{
+				@include transform(scale(1.13));
+			}
+			&:hover h3, &:hover p{
+				@include transform(scale(1.17));
+			}
+			*, &:hover{
+				@extend .transition-all;
 			}
 			.avatar{
 				border-radius: 50%;
@@ -30,6 +53,7 @@
 				height: 15rem;
 				overflow: hidden;
 				display: table;
+
 			}
 			display: inline-block;
 			//@extend .columns, .large-3;
@@ -48,5 +72,28 @@
 				color: #7e7e7f;
 			}
 		}
+	}
+}
+.centerBlockFixed{
+	position: fixed;
+	width: 100% !important;
+	height: 100% !important;
+	top: 0px !important;
+	left: 0px !important;
+	padding: 5% 0;
+	background: rgba($orange, 0.99);
+	z-index: 9999;
+	.close{
+		font-family: 'alphasights';
+		
+		position: fixed;
+		top:1em;
+		right:1em;
+		color: #333;
+		display: block;
+		font-size:2em
+	}
+	p{
+		color: darken($orange, 13%);
 	}
 }

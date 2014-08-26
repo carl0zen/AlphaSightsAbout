@@ -1,4 +1,4 @@
 
-a, a:before{
+a, a:before, .transition-all{
 	@include transition(all 0.3s ease);
 }
