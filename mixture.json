@@ -3,7 +3,7 @@
     "relativePaths": true
   },
   "customRubyPath": null,
-  "debug": false,
+  "debug": true,
   "domain": null,
   "followLeader": true,
   "lintScripts": false,

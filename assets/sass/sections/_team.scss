@@ -27,7 +27,7 @@
 		display: none;
 	}
 	.team{
-		display: inline-block;
+		float:left;
 		.item{
 			&:first-child{
 				animation-delay:3s;

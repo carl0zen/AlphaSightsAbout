@@ -7,7 +7,7 @@
 ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝
 */
 header{
-	&.top-bar{
+	
 		background: white;
 		position: fixed;
 		width:100%;
@@ -16,18 +16,23 @@ header{
 		line-height: 4em;
 		line-height: $header__height;
 		z-index: 10001;
+	
+	input{
+		display:none;
 	}
+	.label__menu--close{display:none}
 	.row{
 		max-width:$content__max-width !important;
 		margin:0 auto;
 	}
 	.logo{
-		
-		@include grid-column(2);
+		float:left;
+		width:3em;
 	}
 	nav{
 		text-align: right;
-		
+		float: right;
+
 		@include grid-column(10);
 
 		li {

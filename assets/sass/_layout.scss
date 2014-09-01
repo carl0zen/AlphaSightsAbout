@@ -1,0 +1,70 @@
+@include max-screen(960px)
+{
+	header{
+		overflow: hidden;
+		height:auto;
+		header .label__menu--open{display: block;
+			position: absolute;
+			right: 0;
+			top: 0;
+			padding: 20px;
+			width: 4em;
+			height: 3em;
+		}
+		
+	}
+
+	input{
+		display: none;
+	}
+	header .label__menu--open:before{
+		content:'M';
+		margin: 0;
+		display: block;
+		padding: 0% 2%;
+		font-family: alphasights;
+		position: fixed;
+		top: 0;
+		right: 0;
+		font-size: 1.7em;
+	}
+
+	header .icon__menu{
+
+	width: 20px;
+	height: 20px;
+	top: 0;
+	right: 0;
+	position: absolute;
+	z-index: 100;
+}
+	header .icon__menu:checked + label + nav{
+		opacity:1;
+		height:auto;
+	}
+	header .icon__menu:checked + label + nav + .label__menu--close{
+		display: block;
+	}
+	header .icon__menu .label__menu--close{
+		display:none;
+	}
+	header nav a:hover {
+		background: whitesmoke;
+	}
+	header nav {
+		position: relative;
+		background: white;
+		width: 100%;
+		padding: 2em 0;
+		height: 0;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+	}
+	header nav a {
+	display: block;
+	width: 100%;
+	padding: 0 2em;
+	margin: 0;
+	}
+}

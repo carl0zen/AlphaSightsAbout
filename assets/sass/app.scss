@@ -13,6 +13,8 @@
  */
 @import "settings";
 @import "generic/mixins";
+@import "generic/media-queries";
+
 @import "default/normalize";
 @import "default/base";
 @import "default/clearfix";
@@ -33,6 +35,7 @@
 @import "foundation/components/grid";
 @import "foundation/components/top-bar";
 @import "foundation/components/orbit";
+@import "foundation/components/visibility";
 
 /* 
  * Breakpoints
@@ -47,7 +50,9 @@
  ╚████╔╝ ███████╗██║ ╚████║██████╔╝╚██████╔╝██║  ██║
   ╚═══╝  ╚══════╝╚═╝  ╚═══╝╚═════╝  ╚═════╝ ╚═╝  ╚═╝
 */
+
 @import 'vendor/animate/animate';
+
 @import 'vendor/photostack';
 //@import 'modules/uiMorphingButton';
 
@@ -65,7 +70,7 @@
 @import 'includes/nav';
 @import "includes/helpers";
 @import "includes/animation";
-
+@import "layout";
 
 
 

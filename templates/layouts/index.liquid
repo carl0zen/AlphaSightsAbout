@@ -7,7 +7,7 @@
         <link rel="alternate" type="application/rss+xml" href="/rss" title="RSS Feed">
         <title>{% block title %}{{ global.title }}{% endblock %}</title>
         {{ "app.css" | asset_url | stylesheet_tag }}
-        <link rel="stylesheet" href="{{ "layout.css" | asset_url }}" media="(min-width:1em)">
+    
         {{ "modernizr.min.js" | asset_url | script_tag }}
     </head>
     <body>
