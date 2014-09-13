@@ -10,11 +10,9 @@
 //@import 'vendor/imagesloaded.js';
 //@import 'vendor/skrollr.js';
 @import 'vendor/foundation/foundation.js';
-@import 'vendor/classie.min.js';
-@import 'vendor/photostack.js';
+@import 'vendor/slick.js';
 @import 'vendor/waypoints.js';
 
-//@import 'vendor/foundation/foundation.orbit.js';
 var animateTeamItem = function(){
   
 }
@@ -45,15 +43,7 @@ $(document).ready(function(e){
       
     });**/
   //Check if images finished loading
-  $('.photostack img').load(function(){
-    
-    new Photostack( document.getElementById( 'photostack-1' ), {
-            callback : function( item ) {
-              //console.log(item)
-            }
-          } );
-    
-  });
+ $('.slider').slick();
   
   animateTeamItem();
   $(document).foundation();

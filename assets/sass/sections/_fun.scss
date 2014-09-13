@@ -8,37 +8,33 @@
 */
 #fun{
 	padding: 0;
-	height: 94%;
 	background: lighten($gray,20%);
 	text-align: center;
 	color:$headingFontColor;
-	
-		.content{
+	#fun__slider .item img{
+	    display: block;
+	    width: 100%;
+	    height: auto;
+	}
+	.content{
+		position: relative;
+		padding: 15% 0;
+		p{
+			margin: 3% 0
+		}
+		h1,p{
+			z-index: 1000;
 			position: relative;
-			padding: 3.2% 0;
-			p{
-				margin: 3% 0
-			}
-			h1,p{
-				z-index: 1000;
-				position: relative;
-				text-align: center;
-				width:100%
-			}
+			text-align: center;
+			width:100%
 		}
-
-	.fun{
-		
-		margin:0rem auto 0 0;
-		img{margin:0 auto}
 	}
+
 	
-	.photostack{
-		margin-top: -14.5em;
-		height:96.8%;
-		nav{
+	
+	margin:0rem auto 0 0;
+	img{margin:0 auto}
 
-		}
-		
-	}
+	
+
 }

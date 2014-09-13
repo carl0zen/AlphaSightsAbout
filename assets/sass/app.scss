@@ -31,11 +31,7 @@
 **/
 
 
-@import "foundation/components/global";
-@import "foundation/components/grid";
-@import "foundation/components/top-bar";
-@import "foundation/components/orbit";
-@import "foundation/components/visibility";
+@import "foundation";
 
 /* 
  * Breakpoints
@@ -52,8 +48,9 @@
 */
 
 @import 'vendor/animate/animate';
+@import 'vendor/slick/slick';
 
-@import 'vendor/photostack';
+
 //@import 'modules/uiMorphingButton';
 
 /**
@@ -70,7 +67,7 @@
 @import 'includes/nav';
 @import "includes/helpers";
 @import "includes/animation";
-@import "layout";
+
 
 
 
@@ -90,7 +87,7 @@
 @import 'sections/benefits';
 @import "sections/positions";
 
-
+@import "layout";
 
 .content{
 	padding-top: $header__height;
